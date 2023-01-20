@@ -1,0 +1,31 @@
+\doxysection{UI\+\_\+\+Base.\+cs}
+\label{_u_i___base_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/UI\_Base.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/UI\_Base.cs}}
+\textbf{ 이 파일의 문서화 페이지로 가기}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }UI\_Base\ :\ MonoBehaviour}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{protected}\ Dictionary<Type,\ UnityEngine.Object[]>\ mObjects\ =\ \textcolor{keyword}{new}\ Dictionary<Type,\ UnityEngine.Object[]>();}
+\DoxyCodeLine{00011\ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ Bind<T>(Type\ type)\ where\ T\ :\ UnityEngine.Object}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ names\ =\ Enum.GetNames(type);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ UnityEngine.Object[]\ objects\ =\ \textcolor{keyword}{new}\ UnityEngine.Object[names.Length];}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ mObjects.Add(typeof(T),\ objects);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ names.Length;\ i++)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ todo}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,74 @@
+\doxysection{Game\+Manager.\+cs}
+\label{_game_manager_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Managers/GameManager.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Managers/GameManager.cs}}
+\textbf{ 이 파일의 문서화 페이지로 가기}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GameManager\ :\ MonoBehaviour}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ GameManager\ sInstance;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ GameManager\ Instance\ \{\ \textcolor{keyword}{get}\ \{\ Init();\ \textcolor{keywordflow}{return}\ sInstance;\ \}\ \}}
+\DoxyCodeLine{00013\ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}\ InputManager\ mInputMng\ =\ \textcolor{keyword}{new}\ InputManager();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{private}\ ResourceManager\ mResourceMng\ =\ \textcolor{keyword}{new}\ ResourceManager();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}\ PoolManager\ mPoolMng\ =\ \textcolor{keyword}{new}\ PoolManager();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}\ UIManager\ mUIMng\ =\ \textcolor{keyword}{new}\ UIManager();}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ InputManager\ InputMng\ =>\ Instance.mInputMng;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ ResourceManager\ ResourceMng\ =>\ Instance.mResourceMng;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ PoolManager\ PoolMng\ =>\ Instance.mPoolMng;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ UIManager\ UIMng\ =>\ Instance.mUIMng;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Init();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ Test();}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ mInputMng.OnUpdate();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Init()}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sInstance\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ go\ =\ GameObject.Find(\textcolor{stringliteral}{"{}@GameManager"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go\ =\ \textcolor{keyword}{new}\ GameObject\ \{\ name\ =\ \textcolor{stringliteral}{"{}@GameManager"{}}\ \};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go.AddComponent<GameManager>();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ DontDestroyOnLoad(go);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ sInstance\ =\ go.GetComponent<GameManager>();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ sInstance.mPoolMng.Init();}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Clear()}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ PoolMng.Clear();}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Test()}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ List<GameObject>\ go\ =\ \textcolor{keyword}{new}\ List<GameObject>();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ i++)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ go.Add(mResourceMng.Instantiate(\textcolor{stringliteral}{"{}Cube"{}}));}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*\ @see}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ void\ Start()}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager\ gm\ =\ GameManager.Instance;}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00075\ \textcolor{comment}{*/}}
+
+\end{DoxyCode}

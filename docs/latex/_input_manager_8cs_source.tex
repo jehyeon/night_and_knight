@@ -1,0 +1,39 @@
+\doxysection{Input\+Manager.\+cs}
+\label{_input_manager_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Managers/InputManager.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Managers/InputManager.cs}}
+\textbf{ 이 파일의 문서화 페이지로 가기}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }InputManager}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}\ Action\ KeyAction\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00012\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnUpdate()}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.anyKey\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (KeyAction\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ KeyAction.Invoke();}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/*\ 사용예제}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ void\ Start()}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager.Input.mKeyAction\ +=\ OnKeyboard;}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ void\ OnKeyboard()}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (Input.GetKey(KeyCode.W))}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ transform.position\ +=\ Vector3.forward\ *\ Time.deltaTime\ *\ mSpeed;}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*/}}
+
+\end{DoxyCode}
