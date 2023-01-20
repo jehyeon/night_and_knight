@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @brief Pool 객체들을 관리하는 Manager
+ * @details ResourceManager를 보조
+ */
 public class PoolManager
 {
     private Dictionary<string, Pool> mPoolDic = new Dictionary<string, Pool>();
@@ -11,12 +15,14 @@ public class PoolManager
     {
         if (mRoot == null)
         {
-            mRoot = new GameObject { name = "Pool_Root" }.transform;
+            mRoot = new GameObject { name = "@Pool_Root" }.transform;
             Object.DontDestroyOnLoad(mRoot);
         }
     }
     
-    // Pool 생성
+    /**
+     * @param original의 Pool을 count만큼 생성
+     */
     public void CreatePool(GameObject original, int count = 5)
     {
         Pool pool = new Pool();
@@ -26,7 +32,9 @@ public class PoolManager
         mPoolDic.Add(original.name, pool);
     }
     
-    // 다 사용한 오브젝트를 Pool에 다시 넣어 대기 상태로 전환
+    /**
+     * @param 다 사용한 poolable오브젝트를 Pool에 다시 넣어 대기 상태로 전환
+     */
     public void Push(PoolAble poolAble)
     {
         string name = poolAble.gameObject.name;
@@ -38,8 +46,11 @@ public class PoolManager
         
         mPoolDic[name].Push(poolAble);
     }
-
-    // Pool로부터 사용할 오브젝트 반환
+    
+    /**
+     * @param original의 이름에 해당하는 Pool을 Pop한 후 parent를 부모 오브젝트로 설정
+     * @return Pool로부터 사용할 Poolable 리턴
+     */
     public PoolAble Pop(GameObject original, Transform parent = null)
     {
         if(mPoolDic.ContainsKey(original.name) == false)
@@ -48,7 +59,10 @@ public class PoolManager
         return mPoolDic[original.name].Pop(parent);
     }
     
-    // 원본 프리팹 반환
+    /**
+     * @param name에 해당하는 원본 GameObject에 접근
+     * @return 원본 GameObject를 리턴
+     */
     public GameObject GetOriginal(string name)
     {
         if (mPoolDic.ContainsKey(name) == false)
@@ -57,7 +71,9 @@ public class PoolManager
         return mPoolDic[name].Original;
     }
     
-    // Pool 오브젝트 Clear
+    /**
+     * @brief 모든 Pool Clear
+     */
     public void Clear()
     {
         foreach (Transform child in mRoot)

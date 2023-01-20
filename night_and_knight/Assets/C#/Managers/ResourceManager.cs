@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @brief 에셋 파일을 로드하는 Manager
+ */
 public class ResourceManager
 {
-    // Resource 폴더를 시작 위치로 한 "path"에 해당하는 T 타입의 에셋 파일을 로드 후 반환
+    /**
+     * @param Resource폴더를 시작 위치로 path에 해당하는 에셋 파일 로드
+     * @return 로드한 파일을 T타입으로 리턴
+     */
     public T Load<T>(string path) where T : Object
     {
         if (typeof(T) == typeof(GameObject))
@@ -22,7 +28,11 @@ public class ResourceManager
         return Resources.Load<T>(path);
     }
     
-    // "path"에 해당하는 에셋을 GameObject타입으로 반환
+    /**
+     * @param path에 해당하는 GameObject 생성
+     * @param 부모 오브젝트를 parent 로 설정
+     * @return 생성된 GameObject 리턴
+     */
     public GameObject Instantiate(string path, Transform parent = null)
     {
         GameObject original = Load<GameObject>($"Prefabs/{path}");
@@ -40,8 +50,10 @@ public class ResourceManager
         
         return go;
     }
-
-    // GameObject 제거
+    
+    /**
+     * @param go 제거
+     */
     public void Destroy(GameObject go)
     {
         if (go == null)
