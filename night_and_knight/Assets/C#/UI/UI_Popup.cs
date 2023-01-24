@@ -14,6 +14,6 @@ public class UI_Popup : UI_Base
      */
     public virtual void ClosePopupUI()
     {
-        //GameManager.UIMng.ClosePopupUI(this);
+        GameManager.UIMng.ClosePopupUI(this);
     }
 }

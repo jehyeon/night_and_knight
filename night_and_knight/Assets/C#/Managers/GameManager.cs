@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Init();
-        Test();
     }
     
     void Update()
@@ -60,12 +59,7 @@ public class GameManager : MonoBehaviour
         PoolMng.Clear();
     }
 
-    public void Test()
-    {
-        List<GameObject> go = new List<GameObject>();
-        for (int i = 0; i < 2; i++)
-            go.Add(mResourceMng.Instantiate("Cube"));
-    }
+    
 }
 
 /* 사용예제

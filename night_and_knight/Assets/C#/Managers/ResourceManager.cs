@@ -8,7 +8,7 @@ using UnityEngine;
 public class ResourceManager
 {
     /**
-     * @param Resource폴더를 시작 위치로 path에 해당하는 에셋 파일 로드
+     * @param Resources폴더를 시작 위치로 path에 해당하는 에셋 파일 로드
      * @return 로드한 파일을 T타입으로 리턴
      */
     public T Load<T>(string path) where T : Object
@@ -29,7 +29,7 @@ public class ResourceManager
     }
     
     /**
-     * @param path에 해당하는 GameObject 생성
+     * @param Prefabs폴더를 시작 위치로 path에 해당하는 GameObject 생성
      * @param 부모 오브젝트를 parent 로 설정
      * @return 생성된 GameObject 리턴
      */
