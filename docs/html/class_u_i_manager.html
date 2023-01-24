@@ -99,13 +99,25 @@ $(document).ready(function(){initNavTree('class_u_i_manager.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
-<p>게임 씬 상에서 생길 여러가지 UI 캔버스 프리팹들의 생성과 삭제를 관리  
+<p>UI 캔버스 프리팹들의 생성과 삭제를 관리  
  <a href="class_u_i_manager.html#details">더 자세히 ...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a9927b92157fc265e61799437bc3d0c34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a9927b92157fc265e61799437bc3d0c34">SetCanvas</a> (GameObject go, bool sort=true)</td></tr>
 <tr class="separator:a9927b92157fc265e61799437bc3d0c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d241f17a976ffd226a5a85c8ca6a79"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a24d241f17a976ffd226a5a85c8ca6a79">ShowSceneUI&lt; T &gt;</a> (string name=null)</td></tr>
+<tr class="separator:a24d241f17a976ffd226a5a85c8ca6a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c80654123d4b920de9b6135ce0f1b5"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#ad4c80654123d4b920de9b6135ce0f1b5">ShowPopupUI&lt; T &gt;</a> (string name=null)</td></tr>
+<tr class="separator:ad4c80654123d4b920de9b6135ce0f1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4416f9eb9f7d5966110fbef4b5bd5a63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63">ClosePopupUI</a> ()</td></tr>
+<tr class="memdesc:a4416f9eb9f7d5966110fbef4b5bd5a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">가장 Order가 높은 PopupUI 제거  <br /></td></tr>
+<tr class="separator:a4416f9eb9f7d5966110fbef4b5bd5a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539e380cd5f5c9413a9de08c982ff960"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a539e380cd5f5c9413a9de08c982ff960">ClosePopupUI</a> (<a class="el" href="class_u_i___popup.html">UI_Popup</a> popup)</td></tr>
+<tr class="separator:a539e380cd5f5c9413a9de08c982ff960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c45b1ca55f9749a0875024b8cda2044"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a9c45b1ca55f9749a0875024b8cda2044">CloseAllPopupUI</a> ()</td></tr>
+<tr class="memdesc:a9c45b1ca55f9749a0875024b8cda2044"><td class="mdescLeft">&#160;</td><td class="mdescRight">모든 PopupUI 제거  <br /></td></tr>
+<tr class="separator:a9c45b1ca55f9749a0875024b8cda2044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 속성</h2></td></tr>
@@ -116,16 +128,118 @@ Public 멤버 함수</h2></td></tr>
 Private 속성</h2></td></tr>
 <tr class="memitem:ad9548c3722176e3c7393150195ccda8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#ad9548c3722176e3c7393150195ccda8e">mOrder</a> = 10</td></tr>
 <tr class="separator:ad9548c3722176e3c7393150195ccda8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1383fcc65dbf2f647d79707e0dbbc3ed"><td class="memItemLeft" align="right" valign="top">Stack&lt; <a class="el" href="class_u_i___popup.html">UI_Popup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a> = new Stack&lt;<a class="el" href="class_u_i___popup.html">UI_Popup</a>&gt;()</td></tr>
-<tr class="separator:a1383fcc65dbf2f647d79707e0dbbc3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32e41023d8bef34ecb5544fbbff1c239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_i___scene.html">UI_Scene</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a32e41023d8bef34ecb5544fbbff1c239">mSceneUI</a> = null</td></tr>
 <tr class="separator:a32e41023d8bef34ecb5544fbbff1c239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1383fcc65dbf2f647d79707e0dbbc3ed"><td class="memItemLeft" align="right" valign="top">Stack&lt; <a class="el" href="class_u_i___popup.html">UI_Popup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a> = new Stack&lt;<a class="el" href="class_u_i___popup.html">UI_Popup</a>&gt;()</td></tr>
+<tr class="separator:a1383fcc65dbf2f647d79707e0dbbc3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p>게임 씬 상에서 생길 여러가지 UI 캔버스 프리팹들의 생성과 삭제를 관리 </p>
+<div class="textblock"><p>UI 캔버스 프리팹들의 생성과 삭제를 관리 </p>
 
 <p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a9c45b1ca55f9749a0875024b8cda2044" name="a9c45b1ca55f9749a0875024b8cda2044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c45b1ca55f9749a0875024b8cda2044">&#9670;&#160;</a></span>CloseAllPopupUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CloseAllPopupUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>모든 PopupUI 제거 </p>
+
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00116">116</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>    {</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">while</span> (<a class="code hl_variable" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            <a class="code hl_function" href="class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63">ClosePopupUI</a>();</div>
+<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="ttc" id="aclass_u_i_manager_html_a1383fcc65dbf2f647d79707e0dbbc3ed"><div class="ttname"><a href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">UIManager.mPopupStack</a></div><div class="ttdeci">Stack&lt; UI_Popup &gt; mPopupStack</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00013">UIManager.cs:13</a></div></div>
+<div class="ttc" id="aclass_u_i_manager_html_a4416f9eb9f7d5966110fbef4b5bd5a63"><div class="ttname"><a href="class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63">UIManager.ClosePopupUI</a></div><div class="ttdeci">void ClosePopupUI()</div><div class="ttdoc">가장 Order가 높은 PopupUI 제거</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00085">UIManager.cs:85</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4416f9eb9f7d5966110fbef4b5bd5a63" name="a4416f9eb9f7d5966110fbef4b5bd5a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4416f9eb9f7d5966110fbef4b5bd5a63">&#9670;&#160;</a></span>ClosePopupUI() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClosePopupUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>가장 Order가 높은 PopupUI 제거 </p>
+
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a>.Count == 0)</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_class" href="class_u_i___popup.html">UI_Popup</a> popupUI= <a class="code hl_variable" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a>.Pop();</div>
+<div class="line"><span class="lineno">   91</span>        <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#a496f52583a8ea4b899679fe3254546ed">ResourceMng</a>.<a class="code hl_function" href="class_resource_manager.html#a3d8540720596e320425d0cfca291255b">Destroy</a>(popupUI.gameObject);</div>
+<div class="line"><span class="lineno">   92</span>        popupUI = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_variable" href="class_u_i_manager.html#ad9548c3722176e3c7393150195ccda8e">mOrder</a>--;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">전역으로 게임 전체와 다른 Manager를 관리하는 Manager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00010">GameManager.cs:11</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_a496f52583a8ea4b899679fe3254546ed"><div class="ttname"><a href="class_game_manager.html#a496f52583a8ea4b899679fe3254546ed">GameManager.ResourceMng</a></div><div class="ttdeci">static ResourceManager ResourceMng</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00021">GameManager.cs:21</a></div></div>
+<div class="ttc" id="aclass_resource_manager_html_a3d8540720596e320425d0cfca291255b"><div class="ttname"><a href="class_resource_manager.html#a3d8540720596e320425d0cfca291255b">ResourceManager.Destroy</a></div><div class="ttdeci">void Destroy(GameObject go)</div><div class="ttdef"><b>Definition:</b> <a href="_resource_manager_8cs_source.html#l00057">ResourceManager.cs:57</a></div></div>
+<div class="ttc" id="aclass_u_i___popup_html"><div class="ttname"><a href="class_u_i___popup.html">UI_Popup</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_i___popup_8cs_source.html#l00005">UI_Popup.cs:6</a></div></div>
+<div class="ttc" id="aclass_u_i_manager_html_ad9548c3722176e3c7393150195ccda8e"><div class="ttname"><a href="class_u_i_manager.html#ad9548c3722176e3c7393150195ccda8e">UIManager.mOrder</a></div><div class="ttdeci">int mOrder</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00010">UIManager.cs:10</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a539e380cd5f5c9413a9de08c982ff960" name="a539e380cd5f5c9413a9de08c982ff960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539e380cd5f5c9413a9de08c982ff960">&#9670;&#160;</a></span>ClosePopupUI() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClosePopupUI </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_i___popup.html">UI_Popup</a>&#160;</td>
+          <td class="paramname"><em>popup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">가장</td><td>Order가 높은 PopupUI 확인 후 제거 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00099">99</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>    {</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a>.Count == 0)</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a>.Peek() != popup)</div>
+<div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            Debug.Log(<span class="stringliteral">&quot;Close Popup Failed&quot;</span>);</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>        </div>
+<div class="line"><span class="lineno">  110</span>        <a class="code hl_function" href="class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63">ClosePopupUI</a>();</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a9927b92157fc265e61799437bc3d0c34" name="a9927b92157fc265e61799437bc3d0c34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9927b92157fc265e61799437bc3d0c34">&#9670;&#160;</a></span>SetCanvas()</h2>
 
@@ -153,15 +267,126 @@ Private 속성</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
-    <tr><td class="paramname">go의</td><td>캔버스 컴포넌트 가져와 sort order값 세팅 </td></tr>
+    <tr><td class="paramname">sort가</td><td>true면, go의 Canvas 컴포넌트를 가져와 mOrder값을 1더해서 설정 (PopupUI) </td></tr>
+    <tr><td class="paramname">sort가</td><td>false면 go의 Canvas 컴포넌트를 가져와 mOrder값을 0으로 설정 (SceneUI) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        </div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>    {</div>
+<div class="line"><span class="lineno">   33</span>        Canvas canvas = <a class="code hl_class" href="class_util.html">Util</a>.GetOrAddComponent&lt;Canvas&gt;(go);</div>
+<div class="line"><span class="lineno">   34</span>        canvas.renderMode = RenderMode.ScreenSpaceOverlay;</div>
+<div class="line"><span class="lineno">   35</span>        canvas.overrideSorting = <span class="keyword">true</span>; <span class="comment">// 부모 캔버스와는 독립적인 오더값을 가짐</span></div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (sort)</div>
+<div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            canvas.sortingOrder = <a class="code hl_variable" href="class_u_i_manager.html#ad9548c3722176e3c7393150195ccda8e">mOrder</a>++;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            canvas.sortingOrder = 0;</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="aclass_util_html"><div class="ttname"><a href="class_util.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="_util_8cs_source.html#l00008">Util.cs:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad4c80654123d4b920de9b6135ce0f1b5" name="ad4c80654123d4b920de9b6135ce0f1b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c80654123d4b920de9b6135ce0f1b5">&#9670;&#160;</a></span>ShowPopupUI&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T ShowPopupUI&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>null</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">이름이</td><td>name인 PopupUI 생성 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>생성한 PopupUI T컴포넌트로 리턴 </dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_u_i___popup.html">UI_Popup</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                        : <a class="code hl_class" href="class_u_i___popup.html">UI_Popup</a></div>
+<div class="line"><span class="lineno">   69</span>    {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(name))</div>
+<div class="line"><span class="lineno">   71</span>            name = typeof(T).Name;</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        GameObject go = <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#a496f52583a8ea4b899679fe3254546ed">ResourceMng</a>.<a class="code hl_function" href="class_resource_manager.html#a04b388e19bffc92646a7c885976a9bbd">Instantiate</a>($<span class="stringliteral">&quot;UI/PopupUI/{name}&quot;</span>);</div>
+<div class="line"><span class="lineno">   74</span>        T popupUI = <a class="code hl_class" href="class_util.html">Util</a>.GetOrAddComponent&lt;T&gt;(go);</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_variable" href="class_u_i_manager.html#a1383fcc65dbf2f647d79707e0dbbc3ed">mPopupStack</a>.Push(popupUI);</div>
+<div class="line"><span class="lineno">   76</span>        </div>
+<div class="line"><span class="lineno">   77</span>        go.transform.SetParent(<a class="code hl_property" href="class_u_i_manager.html#a9b07d4317d951d5a4f0bce4f1a405561">Root</a>.transform);</div>
+<div class="line"><span class="lineno">   78</span>        </div>
+<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">return</span> popupUI;</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="ttc" id="aclass_resource_manager_html_a04b388e19bffc92646a7c885976a9bbd"><div class="ttname"><a href="class_resource_manager.html#a04b388e19bffc92646a7c885976a9bbd">ResourceManager.Instantiate</a></div><div class="ttdeci">GameObject Instantiate(string path, Transform parent=null)</div><div class="ttdef"><b>Definition:</b> <a href="_resource_manager_8cs_source.html#l00036">ResourceManager.cs:36</a></div></div>
+<div class="ttc" id="aclass_u_i_manager_html_a9b07d4317d951d5a4f0bce4f1a405561"><div class="ttname"><a href="class_u_i_manager.html#a9b07d4317d951d5a4f0bce4f1a405561">UIManager.Root</a></div><div class="ttdeci">GameObject Root</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00015">UIManager.cs:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24d241f17a976ffd226a5a85c8ca6a79" name="a24d241f17a976ffd226a5a85c8ca6a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d241f17a976ffd226a5a85c8ca6a79">&#9670;&#160;</a></span>ShowSceneUI&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T ShowSceneUI&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>null</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">이름이</td><td>name인 SceneUI 생성 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>생성한 sceneUI T컴포넌트로 리턴 </dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>타입 한정자들</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em><a class="el" href="class_u_i___scene.html">UI_Scene</a></em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                        : <a class="code hl_class" href="class_u_i___scene.html">UI_Scene</a></div>
+<div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(name))</div>
+<div class="line"><span class="lineno">   54</span>            name = typeof(T).Name;</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>        GameObject go = <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#a496f52583a8ea4b899679fe3254546ed">ResourceMng</a>.<a class="code hl_function" href="class_resource_manager.html#a04b388e19bffc92646a7c885976a9bbd">Instantiate</a>($<span class="stringliteral">&quot;UI/SceneUI/{name}&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>        T sceneUI = <a class="code hl_class" href="class_util.html">Util</a>.GetOrAddComponent&lt;T&gt;(go);</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>        go.transform.SetParent(<a class="code hl_property" href="class_u_i_manager.html#a9b07d4317d951d5a4f0bce4f1a405561">Root</a>.transform);</div>
+<div class="line"><span class="lineno">   60</span>        </div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> sceneUI;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="ttc" id="aclass_u_i___scene_html"><div class="ttname"><a href="class_u_i___scene.html">UI_Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_i___scene_8cs_source.html#l00005">UI_Scene.cs:6</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -210,7 +435,7 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -234,7 +459,7 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="_u_i_manager_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>

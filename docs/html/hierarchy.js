@@ -16,6 +16,7 @@ var hierarchy =
       [ "PoolAble", "class_pool_able.html", null ],
       [ "SceneManager", "class_scene_manager.html", null ],
       [ "SoundManager", "class_sound_manager.html", null ],
+      [ "Test", "class_test.html", null ],
       [ "UI_Base", "class_u_i___base.html", [
         [ "UI_Popup", "class_u_i___popup.html", [
           [ "UI_Button", "class_u_i___button.html", null ]

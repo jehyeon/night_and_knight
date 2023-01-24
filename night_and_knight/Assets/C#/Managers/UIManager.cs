@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
- * @brief 게임 씬 상에서 생길 여러가지 UI 캔버스 프리팹들의 생성과 삭제를 관리
+ * @brief UI 캔버스 프리팹들의 생성과 삭제를 관리
  */
 public class UIManager
 {
@@ -25,7 +25,8 @@ public class UIManager
     }
 
     /**
-     * @param go의 캔버스 컴포넌트 가져와 sort order값 세팅
+     * @param sort가 true면, go의 Canvas 컴포넌트를 가져와 mOrder값을 1더해서 설정 (PopupUI)
+     * @param sort가 false면 go의 Canvas 컴포넌트를 가져와 mOrder값을 0으로 설정 (SceneUI)
      */
     public void SetCanvas(GameObject go, bool sort = true)
     {
@@ -44,7 +45,7 @@ public class UIManager
     }
 
     /**
-     * @param 이름이 name인 SceneUI 캔버스 프리팹 생성
+     * @param 이름이 name인 SceneUI 생성
      * @return 생성한 sceneUI T컴포넌트로 리턴
      */
     public T ShowSceneUI<T>(string name = null) where T : UI_Scene
@@ -61,7 +62,7 @@ public class UIManager
     }
     
     /**
-     * @param 이름이 name인 PopupUI 캔버스 프리팹 생성
+     * @param 이름이 name인 PopupUI 생성
      * @return 생성한 PopupUI T컴포넌트로 리턴
      */
     public T ShowPopupUI<T>(string name = null) where T : UI_Popup
