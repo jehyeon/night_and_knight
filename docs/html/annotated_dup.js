@@ -12,6 +12,7 @@ var annotated_dup =
     [ "ResourceManager", "class_resource_manager.html", "class_resource_manager" ],
     [ "SceneManager", "class_scene_manager.html", "class_scene_manager" ],
     [ "SoundManager", "class_sound_manager.html", "class_sound_manager" ],
+    [ "Test", "class_test.html", "class_test" ],
     [ "UI_Base", "class_u_i___base.html", "class_u_i___base" ],
     [ "UI_Button", "class_u_i___button.html", "class_u_i___button" ],
     [ "UI_EventHandler", "class_u_i___event_handler.html", "class_u_i___event_handler" ],

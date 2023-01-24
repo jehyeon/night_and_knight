@@ -10,7 +10,8 @@ var searchData=
   ['poolmanager_2ecs_7',['PoolManager.cs',['../_pool_manager_8cs.html',1,'']]],
   ['poolmng_8',['PoolMng',['../class_game_manager.html#a41f104b8b1d870b00ea3289e5b794f94',1,'GameManager']]],
   ['pop_9',['Pop',['../class_pool_manager.html#ae2c723537253c737c554ddf99937acdc',1,'PoolManager.Pop()'],['../class_pool.html#ad905937d335331af4f664966fb30d4a6',1,'Pool.Pop()']]],
-  ['prefabs_10',['Prefabs',['../_resource_manager_8cs.html#a420b5550ea91cf351d0e9dcacdf6109a',1,'ResourceManager.cs']]],
-  ['press_11',['Press',['../class_define.html#a5f278706f235727f39ae168af63b1d99a0610123bdd4ffc191a3ea05a847e1307',1,'Define']]],
-  ['push_12',['Push',['../class_pool_manager.html#a2847330763b5c96efa475b4cb63ff9d4',1,'PoolManager.Push()'],['../class_pool.html#a2847330763b5c96efa475b4cb63ff9d4',1,'Pool.Push()']]]
+  ['popupui_10',['PopupUI',['../_u_i_manager_8cs.html#a4ae3b7a8998525638253a6e3176f6f67',1,'UIManager.cs']]],
+  ['prefabs_11',['Prefabs',['../_resource_manager_8cs.html#a420b5550ea91cf351d0e9dcacdf6109a',1,'ResourceManager.cs']]],
+  ['press_12',['Press',['../class_define.html#a5f278706f235727f39ae168af63b1d99a0610123bdd4ffc191a3ea05a847e1307',1,'Define']]],
+  ['push_13',['Push',['../class_pool_manager.html#a2847330763b5c96efa475b4cb63ff9d4',1,'PoolManager.Push()'],['../class_pool.html#a2847330763b5c96efa475b4cb63ff9d4',1,'Pool.Push()']]]
 ];

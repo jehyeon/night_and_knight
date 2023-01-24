@@ -3,7 +3,6 @@ var class_game_manager =
     [ "Clear", "class_game_manager.html#ade633bf8b439e2bb742c72215c632b19", null ],
     [ "Init", "class_game_manager.html#a1716946dffd7f7f6a9c8f46406ab0732", null ],
     [ "Start", "class_game_manager.html#a07aaf1227e4d645f15e0a964f54ef291", null ],
-    [ "Test", "class_game_manager.html#afcffe8329a548c8c085ea0d987613a0e", null ],
     [ "Update", "class_game_manager.html#aec0783b5a136e042adcc47bae4fe5291", null ],
     [ "mInputMng", "class_game_manager.html#ad1da1229b13f88f464804eae45cf5566", null ],
     [ "mPoolMng", "class_game_manager.html#a33b10a08c026c8762e08d8dc7985592c", null ],

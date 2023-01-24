@@ -11,11 +11,6 @@ Game\+Manager에 대한 상속 다이어그램 \+: \begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_game_manager}
 \end{center}
 \end{figure}
-\doxysubsection*{Public 멤버 함수}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_game_manager_afcffe8329a548c8c085ea0d987613a0e}{Test}} ()
-\end{DoxyCompactItemize}
 \doxysubsection*{정적 Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
@@ -89,13 +84,13 @@ asdf
 
 
 
-\mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_game_manager_8cs_source_l00058}{58}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_game_manager_8cs_source_l00057}{57}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00059\ \ \ \ \ \{}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a41f104b8b1d870b00ea3289e5b794f94}{PoolMng}}.\mbox{\hyperlink{class_pool_manager_aa71d36872f416feaa853788a7a7a7ef8}{Clear}}();}
-\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a41f104b8b1d870b00ea3289e5b794f94}{PoolMng}}.\mbox{\hyperlink{class_pool_manager_aa71d36872f416feaa853788a7a7a7ef8}{Clear}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_game_manager_a1716946dffd7f7f6a9c8f46406ab0732}\label{class_game_manager_a1716946dffd7f7f6a9c8f46406ab0732}} 
@@ -106,26 +101,26 @@ asdf
 
 
 
-\mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_game_manager_8cs_source_l00037}{37}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_game_manager_8cs_source_l00036}{36}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00038\ \ \ \ \ \{}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ go\ =\ GameObject.Find(\textcolor{stringliteral}{"{}@GameManager"{}});}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go\ =\ \textcolor{keyword}{new}\ GameObject\ \{\ name\ =\ \textcolor{stringliteral}{"{}@GameManager"{}}\ \};}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go.AddComponent<\mbox{\hyperlink{class_game_manager}{GameManager}}>();}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ DontDestroyOnLoad(go);}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}\ =\ go.GetComponent<\mbox{\hyperlink{class_game_manager}{GameManager}}>();}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}.\mbox{\hyperlink{class_game_manager_a33b10a08c026c8762e08d8dc7985592c}{mPoolMng}}.\mbox{\hyperlink{class_pool_manager_a1e3b6d38df0786ccf7f938d60e386aae}{Init}}();}
-\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ go\ =\ GameObject.Find(\textcolor{stringliteral}{"{}@GameManager"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go\ =\ \textcolor{keyword}{new}\ GameObject\ \{\ name\ =\ \textcolor{stringliteral}{"{}@GameManager"{}}\ \};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go.AddComponent<\mbox{\hyperlink{class_game_manager}{GameManager}}>();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ DontDestroyOnLoad(go);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}\ =\ go.GetComponent<\mbox{\hyperlink{class_game_manager}{GameManager}}>();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}.\mbox{\hyperlink{class_game_manager_a33b10a08c026c8762e08d8dc7985592c}{mPoolMng}}.\mbox{\hyperlink{class_pool_manager_a1e3b6d38df0786ccf7f938d60e386aae}{Init}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_game_manager_a07aaf1227e4d645f15e0a964f54ef291}\label{class_game_manager_a07aaf1227e4d645f15e0a964f54ef291}} 
@@ -142,27 +137,7 @@ asdf
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00027\ \ \ \ \ \{}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a1716946dffd7f7f6a9c8f46406ab0732}{Init}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_afcffe8329a548c8c085ea0d987613a0e}{Test}}();}
-\DoxyCodeLine{00030\ \ \ \ \ \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_game_manager_afcffe8329a548c8c085ea0d987613a0e}\label{class_game_manager_afcffe8329a548c8c085ea0d987613a0e}} 
-\index{GameManager@{GameManager}!Test@{Test}}
-\index{Test@{Test}!GameManager@{GameManager}}
-\doxysubsubsection{\texorpdfstring{Test()}{Test()}}
-{\footnotesize\ttfamily void Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-\mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_game_manager_8cs_source_l00063}{63}} 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00064\ \ \ \ \ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ List<GameObject>\ go\ =\ \textcolor{keyword}{new}\ List<GameObject>();}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ i++)}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ go.Add(\mbox{\hyperlink{class_game_manager_aa515072fad4240588fa694ecfe229040}{mResourceMng}}.\mbox{\hyperlink{class_resource_manager_a04b388e19bffc92646a7c885976a9bbd}{Instantiate}}(\textcolor{stringliteral}{"{}Cube"{}}));}
-\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_game_manager_aec0783b5a136e042adcc47bae4fe5291}\label{class_game_manager_aec0783b5a136e042adcc47bae4fe5291}} 
@@ -173,13 +148,13 @@ asdf
 
 
 
-\mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_game_manager_8cs_source_l00032}{32}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_game_manager_8cs_source_l00031}{31}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00033\ \ \ \ \ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_ad1da1229b13f88f464804eae45cf5566}{mInputMng}}.\mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{OnUpdate}}();}
-\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_ad1da1229b13f88f464804eae45cf5566}{mInputMng}}.\mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{OnUpdate}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
