@@ -1,0 +1,152 @@
+\hypertarget{class_util}{}\doxysection{Util 클래스 참조}
+\label{class_util}\index{Util@{Util}}
+Util에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_util}
+\end{center}
+\end{figure}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{class_util_a663efa76c682bb744f5b764194c142d4}{Get\+Or\+Add\+Component$<$ T $>$}} (Game\+Object go)
+\item 
+static T \mbox{\hyperlink{class_util_a2c4f1ceed7218a521d6cae3416185950}{Find\+Child$<$ T $>$}} (Game\+Object go, string name=null, bool recursive=false)
+\item 
+static Game\+Object \mbox{\hyperlink{class_util_a7d029f1f523fabef49f2be1d73807582}{Find\+Child}} (Game\+Object go, string name=null, bool recursive=false)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_util_8cs_source}{Util.\+cs}} 파일의 \mbox{\hyperlink{_util_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_util_a7d029f1f523fabef49f2be1d73807582}\label{class_util_a7d029f1f523fabef49f2be1d73807582}} 
+\index{Util@{Util}!FindChild@{FindChild}}
+\index{FindChild@{FindChild}!Util@{Util}}
+\doxysubsubsection{\texorpdfstring{FindChild()}{FindChild()}}
+{\footnotesize\ttfamily static Game\+Object Find\+Child (\begin{DoxyParamCaption}\item[{Game\+Object}]{go,  }\item[{string}]{name = {\ttfamily null},  }\item[{bool}]{recursive = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{매개변수}
+{\em Find\+Child$<$\+Transform$>$에} & 파라미터를 그대로 넣어서 실행하여 game\+Object 검색 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+해당 game\+Object 리턴 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{_util_8cs_source}{Util.\+cs}} 파일의 \mbox{\hyperlink{_util_8cs_source_l00062}{62}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ Transform\ transform\ =\ FindChild<Transform>(go,\ name,\ recursive);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transform\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transform.gameObject;}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_util_a2c4f1ceed7218a521d6cae3416185950}\label{class_util_a2c4f1ceed7218a521d6cae3416185950}} 
+\index{Util@{Util}!FindChild$<$ T $>$@{FindChild$<$ T $>$}}
+\index{FindChild$<$ T $>$@{FindChild$<$ T $>$}!Util@{Util}}
+\doxysubsubsection{\texorpdfstring{FindChild$<$ T $>$()}{FindChild< T >()}}
+{\footnotesize\ttfamily static T \mbox{\hyperlink{class_util_a7d029f1f523fabef49f2be1d73807582}{Find\+Child}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Game\+Object}]{go,  }\item[{string}]{name = {\ttfamily null},  }\item[{bool}]{recursive = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{매개변수}
+{\em go의} & 모든 자식들 중 T컴포넌트를 가지며, name과 이름이 일치하는 Game\+Object 검색 \\
+\hline
+{\em recursive가} & true라면 바로 밑 자식 뿐 아니라 손자, 증손자, ... 모두 검색, false라면 자식만 검색 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+검색한 Game\+Object를 T컴포넌트로 리턴 
+\end{DoxyReturn}
+\begin{Desc}
+\item[타입 한정자들]\begin{description}
+\item[{\em T} : {\em Unity\+Engine.\+Object}]\end{description}
+\end{Desc}
+
+
+\mbox{\hyperlink{_util_8cs_source}{Util.\+cs}} 파일의 \mbox{\hyperlink{_util_8cs_source_l00028}{28}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ UnityEngine.Object}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (recursive\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ go.transform.childCount;\ i++)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Transform\ transform\ =\ go.transform.GetChild(i);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(name)\ ||\ transform.name\ ==\ name)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T\ component\ =\ transform.GetComponent<T>();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (component\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ component;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (T\ component\ \textcolor{keywordflow}{in}\ go.GetComponentsInChildren<T>())}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(name)\ ||\ component.name\ ==\ name)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ component;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_util_a663efa76c682bb744f5b764194c142d4}\label{class_util_a663efa76c682bb744f5b764194c142d4}} 
+\index{Util@{Util}!GetOrAddComponent$<$ T $>$@{GetOrAddComponent$<$ T $>$}}
+\index{GetOrAddComponent$<$ T $>$@{GetOrAddComponent$<$ T $>$}!Util@{Util}}
+\doxysubsubsection{\texorpdfstring{GetOrAddComponent$<$ T $>$()}{GetOrAddComponent< T >()}}
+{\footnotesize\ttfamily static T Get\+Or\+Add\+Component$<$ T $>$ (\begin{DoxyParamCaption}\item[{Game\+Object}]{go }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{매개변수}
+{\em go에} & T컴포넌트가 있다면 가져오고, 없다면 생성 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+가져온/생성한 T컴포넌트 리턴 
+\end{DoxyReturn}
+\begin{Desc}
+\item[타입 한정자들]\begin{description}
+\item[{\em T} : {\em Unity\+Engine.\+Component}]\end{description}
+\end{Desc}
+
+
+\mbox{\hyperlink{_util_8cs_source}{Util.\+cs}} 파일의 \mbox{\hyperlink{_util_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ UnityEngine.Component}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ T\ component\ =\ go.GetComponent<T>();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (component\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ component\ =\ go.AddComponent<T>();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ component;}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ddino/\+Documents/\+Work\+Space/\+Unity\+Projects/alpha-\/project/night\+\_\+and\+\_\+knight/\+Assets/\+C\#/\mbox{\hyperlink{_util_8cs}{Util.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,28 @@
+\hypertarget{_extension_8cs_source}{}\doxysection{Extension.\+cs}
+\label{_extension_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Extension.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Extension.cs}}
+\mbox{\hyperlink{_extension_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00007}00007\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00008}00008\ \textcolor{comment}{\ *\ @brief\ 확장\ 메소드를\ 지원하는\ Class}}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00009}00009\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00010}\mbox{\hyperlink{class_extension}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_extension}{Extension}}}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00012}\mbox{\hyperlink{class_extension_a7916e76f507c718266c2e8e75ba428f6}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{class_extension_a7916e76f507c718266c2e8e75ba428f6}{GetOrAddComponent<T>}}(\textcolor{keyword}{this}\ GameObject\ go)\ where\ T\ :\ UnityEngine.Component}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_util}{Util}}.GetOrAddComponent<T>(go);}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00017}\mbox{\hyperlink{class_extension_a40b318e19e601c790c74f27bccc3277e}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_extension_a40b318e19e601c790c74f27bccc3277e}{BindEvent}}(\textcolor{keyword}{this}\ GameObject\ go,\ Action<PointerEventData>\ action,}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}\ type\ =\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click)}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base}{UI\_Base}}.\mbox{\hyperlink{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}{BindEvent}}(go,\ action,\ type);}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_extension_8cs_source_l00022}00022\ \}}
+
+\end{DoxyCode}

@@ -118,6 +118,24 @@
   \newunicodechar{²}{${}^{2}$}% Superscript two
   \newunicodechar{³}{${}^{3}$}% Superscript three
   % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifpdf
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifxetex
+        \usepackage[pagebackref=true]{hyperref}
+      \else
+        \usepackage[ps2pdf,pagebackref=true]{hyperref}
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={night\+\_\+and\+\_\+knight},%
+      pdfsubject={3\+D Game}%
+    }
   % Custom commands used by the header
   % Custom commands
   \newcommand{\clearemptydoublepage}{%
@@ -136,6 +154,12 @@
 \begin{document}
   \raggedbottom
   % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
   \pagenumbering{alph}
   \begin{titlepage}
   \vspace*{7cm}
@@ -151,9 +175,12 @@
   \tableofcontents
   \clearemptydoublepage
   \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
 %--- Begin generated contents ---
 \chapter{할일 목록}
 \label{todo}
+\Hypertarget{todo}
 \input{todo}
 \chapter{계통도 색인}
 \input{hierarchy}
@@ -163,6 +190,8 @@
 \input{files}
 \chapter{클래스 문서화}
 \input{class_data_manager}
+\input{class_define}
+\input{class_extension}
 \input{class_game_manager}
 \input{class_input_manager}
 \input{class_map_manager}
@@ -174,10 +203,16 @@
 \input{class_sound_manager}
 \input{class_u_i___base}
 \input{class_u_i___button}
+\input{class_u_i___event_handler}
 \input{class_u_i___popup}
 \input{class_u_i___scene}
 \input{class_u_i_manager}
+\input{class_util}
 \chapter{파일 문서화}
+\input{_define_8cs}
+\input{_define_8cs_source}
+\input{_extension_8cs}
+\input{_extension_8cs_source}
 \input{_data_manager_8cs}
 \input{_data_manager_8cs_source}
 \input{_game_manager_8cs}
@@ -204,10 +239,14 @@
 \input{_u_i___base_8cs_source}
 \input{_u_i___button_8cs}
 \input{_u_i___button_8cs_source}
+\input{_u_i___event_handler_8cs}
+\input{_u_i___event_handler_8cs_source}
 \input{_u_i___popup_8cs}
 \input{_u_i___popup_8cs_source}
 \input{_u_i___scene_8cs}
 \input{_u_i___scene_8cs_source}
+\input{_util_8cs}
+\input{_util_8cs_source}
 %--- End generated contents ---
 % Index
   \backmatter

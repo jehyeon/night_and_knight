@@ -1,0 +1,96 @@
+\hypertarget{class_u_i___event_handler}{}\doxysection{UI\+\_\+\+Event\+Handler 클래스 참조}
+\label{class_u_i___event_handler}\index{UI\_EventHandler@{UI\_EventHandler}}
+UI\+\_\+\+Event\+Handler에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i___event_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i___event_handler_a75a4898ac9f2340bc0e07be6ee5f3a96}{On\+Pointer\+Click}} (Pointer\+Event\+Data event\+Data)
+\item 
+void \mbox{\hyperlink{class_u_i___event_handler_af62aada4493e42d098235d6af8b793ec}{On\+Drag}} (Pointer\+Event\+Data event\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ Pointer\+Event\+Data $>$ \mbox{\hyperlink{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}{On\+Click\+Handler}} = null
+\item 
+Action$<$ Pointer\+Event\+Data $>$ \mbox{\hyperlink{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}{On\+Drag\+Handler}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_u_i___event_handler_8cs_source}{UI\+\_\+\+Event\+Handler.\+cs}} 파일의 \mbox{\hyperlink{_u_i___event_handler_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_u_i___event_handler_af62aada4493e42d098235d6af8b793ec}\label{class_u_i___event_handler_af62aada4493e42d098235d6af8b793ec}} 
+\index{UI\_EventHandler@{UI\_EventHandler}!OnDrag@{OnDrag}}
+\index{OnDrag@{OnDrag}!UI\_EventHandler@{UI\_EventHandler}}
+\doxysubsubsection{\texorpdfstring{OnDrag()}{OnDrag()}}
+{\footnotesize\ttfamily void On\+Drag (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_u_i___event_handler_8cs_source}{UI\+\_\+\+Event\+Handler.\+cs}} 파일의 \mbox{\hyperlink{_u_i___event_handler_8cs_source_l00027}{27}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}{OnDragHandler}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}{OnDragHandler}}.Invoke(eventData);}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___event_handler_a75a4898ac9f2340bc0e07be6ee5f3a96}\label{class_u_i___event_handler_a75a4898ac9f2340bc0e07be6ee5f3a96}} 
+\index{UI\_EventHandler@{UI\_EventHandler}!OnPointerClick@{OnPointerClick}}
+\index{OnPointerClick@{OnPointerClick}!UI\_EventHandler@{UI\_EventHandler}}
+\doxysubsubsection{\texorpdfstring{OnPointerClick()}{OnPointerClick()}}
+{\footnotesize\ttfamily void On\+Pointer\+Click (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{event\+Data }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_u_i___event_handler_8cs_source}{UI\+\_\+\+Event\+Handler.\+cs}} 파일의 \mbox{\hyperlink{_u_i___event_handler_8cs_source_l00018}{18}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}{OnClickHandler}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}{OnClickHandler}}.Invoke(eventData);}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}\label{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}} 
+\index{UI\_EventHandler@{UI\_EventHandler}!OnClickHandler@{OnClickHandler}}
+\index{OnClickHandler@{OnClickHandler}!UI\_EventHandler@{UI\_EventHandler}}
+\doxysubsubsection{\texorpdfstring{OnClickHandler}{OnClickHandler}}
+{\footnotesize\ttfamily Action$<$Pointer\+Event\+Data$>$ On\+Click\+Handler = null}
+
+
+
+\mbox{\hyperlink{_u_i___event_handler_8cs_source}{UI\+\_\+\+Event\+Handler.\+cs}} 파일의 \mbox{\hyperlink{_u_i___event_handler_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}\label{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}} 
+\index{UI\_EventHandler@{UI\_EventHandler}!OnDragHandler@{OnDragHandler}}
+\index{OnDragHandler@{OnDragHandler}!UI\_EventHandler@{UI\_EventHandler}}
+\doxysubsubsection{\texorpdfstring{OnDragHandler}{OnDragHandler}}
+{\footnotesize\ttfamily Action$<$Pointer\+Event\+Data$>$ On\+Drag\+Handler = null}
+
+
+
+\mbox{\hyperlink{_u_i___event_handler_8cs_source}{UI\+\_\+\+Event\+Handler.\+cs}} 파일의 \mbox{\hyperlink{_u_i___event_handler_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ddino/\+Documents/\+Work\+Space/\+Unity\+Projects/alpha-\/project/night\+\_\+and\+\_\+knight/\+Assets/\+C\#/\+UI/\mbox{\hyperlink{_u_i___event_handler_8cs}{UI\+\_\+\+Event\+Handler.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\hypertarget{_u_i___event_handler_8cs_source}{}\doxysection{UI\+\_\+\+Event\+Handler.\+cs}
+\label{_u_i___event_handler_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/UI\_EventHandler.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/UI\_EventHandler.cs}}
+\mbox{\hyperlink{_u_i___event_handler_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00007}00007\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00008}00008\ \textcolor{comment}{\ *\ @brief\ GameObject가\ 여러\ 이벤트(클릭,\ 드래그)를\ 받을\ 수\ 있게\ 해주는\ Class}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00009}00009\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00010}\mbox{\hyperlink{class_u_i___event_handler}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_i___event_handler}{UI\_EventHandler}}\ :\ MonoBehaviour,\ IPointerClickHandler,\ IDragHandler}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00012}\mbox{\hyperlink{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ Action<PointerEventData>\ \mbox{\hyperlink{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}{OnClickHandler}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00013}\mbox{\hyperlink{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ Action<PointerEventData>\ \mbox{\hyperlink{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}{OnDragHandler}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00015}00015\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00016}00016\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ OnClickHandler에\ 등록된\ 함수\ 모두\ 실행}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00017}00017\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00018}\mbox{\hyperlink{class_u_i___event_handler_a75a4898ac9f2340bc0e07be6ee5f3a96}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___event_handler_a75a4898ac9f2340bc0e07be6ee5f3a96}{OnPointerClick}}(PointerEventData\ eventData)}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}{OnClickHandler}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___event_handler_a63853a9c7eac222f1974d1f48f6333e7}{OnClickHandler}}.Invoke(eventData);}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00024}00024\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00025}00025\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ OnDragHandler에\ 등록된\ 함수\ 모두\ 실행}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00026}00026\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00027}\mbox{\hyperlink{class_u_i___event_handler_af62aada4493e42d098235d6af8b793ec}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___event_handler_af62aada4493e42d098235d6af8b793ec}{OnDrag}}(PointerEventData\ eventData)}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}{OnDragHandler}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___event_handler_a4b60a118f52bf9e8ffd2b9d49d0cf3b4}{OnDragHandler}}.Invoke(eventData);}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___event_handler_8cs_source_l00032}00032\ \}}
+
+\end{DoxyCode}

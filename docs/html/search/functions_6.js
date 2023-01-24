@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['onupdate_0',['OnUpdate',['../class_input_manager.html#a77491714662f827ac632c2eee20f8963',1,'InputManager']]]
+  ['load_3c_20t_20_3e_0',['Load&lt; T &gt;',['../class_resource_manager.html#a3ecac14e0e3d46060b9e839dcf43724f',1,'ResourceManager']]]
 ];

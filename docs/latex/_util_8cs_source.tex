@@ -1,0 +1,63 @@
+\hypertarget{_util_8cs_source}{}\doxysection{Util.\+cs}
+\label{_util_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Util.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Util.cs}}
+\mbox{\hyperlink{_util_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00005}00005\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00006}00006\ \textcolor{comment}{\ *\ @brief\ 추가기능\ 메소드를\ 지원하는\ 클래스}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00007}00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00008}\mbox{\hyperlink{class_util}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_util}{Util}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00014}\mbox{\hyperlink{class_util_a663efa76c682bb744f5b764194c142d4}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{class_util_a663efa76c682bb744f5b764194c142d4}{GetOrAddComponent<T>}}(GameObject\ go)\ where\ T\ :\ UnityEngine.Component}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ T\ component\ =\ go.GetComponent<T>();}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (component\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ component\ =\ go.AddComponent<T>();}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ component;}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00028}\mbox{\hyperlink{class_util_a2c4f1ceed7218a521d6cae3416185950}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{class_util_a2c4f1ceed7218a521d6cae3416185950}{FindChild<T>}}(GameObject\ go,\ \textcolor{keywordtype}{string}\ name\ =\ \textcolor{keyword}{null},\ \textcolor{keywordtype}{bool}\ recursive\ =\ \textcolor{keyword}{false})\ where\ T\ :\ UnityEngine.Object}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00029}00029\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (recursive\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ go.transform.childCount;\ i++)}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Transform\ transform\ =\ go.transform.GetChild(i);}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(name)\ ||\ transform.name\ ==\ name)}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T\ component\ =\ transform.GetComponent<T>();}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (component\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ component;}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (T\ component\ \textcolor{keywordflow}{in}\ go.GetComponentsInChildren<T>())}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(name)\ ||\ component.name\ ==\ name)}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ component;}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00062}\mbox{\hyperlink{class_util_a7d029f1f523fabef49f2be1d73807582}{00062}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ GameObject\ \mbox{\hyperlink{class_util_a7d029f1f523fabef49f2be1d73807582}{FindChild}}(GameObject\ go,\ \textcolor{keywordtype}{string}\ name\ =\ \textcolor{keyword}{null},\ \textcolor{keywordtype}{bool}\ recursive\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00063}00063\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ Transform\ transform\ =\ FindChild<Transform>(go,\ name,\ recursive);}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (transform\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transform.gameObject;}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_util_8cs_source_l00070}00070\ \}}
+
+\end{DoxyCode}

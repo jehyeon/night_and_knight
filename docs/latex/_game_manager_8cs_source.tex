@@ -1,74 +1,74 @@
-\doxysection{Game\+Manager.\+cs}
+\hypertarget{_game_manager_8cs_source}{}\doxysection{Game\+Manager.\+cs}
 \label{_game_manager_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Managers/GameManager.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Managers/GameManager.cs}}
-\textbf{ 이 파일의 문서화 페이지로 가기}
+\mbox{\hyperlink{_game_manager_8cs}{이 파일의 문서화 페이지로 가기}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System.Collections;}
-\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
-\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }UnityEngine;}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GameManager\ :\ MonoBehaviour}
-\DoxyCodeLine{00010\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ GameManager\ sInstance;}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ GameManager\ Instance\ \{\ \textcolor{keyword}{get}\ \{\ Init();\ \textcolor{keywordflow}{return}\ sInstance;\ \}\ \}}
-\DoxyCodeLine{00013\ \ \ \ \ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}\ InputManager\ mInputMng\ =\ \textcolor{keyword}{new}\ InputManager();}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{private}\ ResourceManager\ mResourceMng\ =\ \textcolor{keyword}{new}\ ResourceManager();}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}\ PoolManager\ mPoolMng\ =\ \textcolor{keyword}{new}\ PoolManager();}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}\ UIManager\ mUIMng\ =\ \textcolor{keyword}{new}\ UIManager();}
-\DoxyCodeLine{00018\ \ \ \ \ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ InputManager\ InputMng\ =>\ Instance.mInputMng;}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ ResourceManager\ ResourceMng\ =>\ Instance.mResourceMng;}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ PoolManager\ PoolMng\ =>\ Instance.mPoolMng;}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ UIManager\ UIMng\ =>\ Instance.mUIMng;}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
-\DoxyCodeLine{00026\ \ \ \ \ \{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Init();}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ Test();}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \ \ \ \ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ Update()}
-\DoxyCodeLine{00032\ \ \ \ \ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ mInputMng.OnUpdate();}
-\DoxyCodeLine{00034\ \ \ \ \ \}}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Init()}
-\DoxyCodeLine{00037\ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sInstance\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ go\ =\ GameObject.Find(\textcolor{stringliteral}{"{}@GameManager"{}});}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go\ =\ \textcolor{keyword}{new}\ GameObject\ \{\ name\ =\ \textcolor{stringliteral}{"{}@GameManager"{}}\ \};}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go.AddComponent<GameManager>();}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ DontDestroyOnLoad(go);}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ sInstance\ =\ go.GetComponent<GameManager>();}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ sInstance.mPoolMng.Init();}
-\DoxyCodeLine{00052\ \ \ \ \ \}}
-\DoxyCodeLine{00053\ \ \ \ \ }
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Clear()}
-\DoxyCodeLine{00058\ \ \ \ \ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ PoolMng.Clear();}
-\DoxyCodeLine{00060\ \ \ \ \ \}}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Test()}
-\DoxyCodeLine{00063\ \ \ \ \ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ List<GameObject>\ go\ =\ \textcolor{keyword}{new}\ List<GameObject>();}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ i++)}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ go.Add(mResourceMng.Instantiate(\textcolor{stringliteral}{"{}Cube"{}}));}
-\DoxyCodeLine{00067\ \ \ \ \ \}}
-\DoxyCodeLine{00068\ \}}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \textcolor{comment}{/*\ @see}}
-\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ void\ Start()}}
-\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \{}}
-\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager\ gm\ =\ GameManager.Instance;}}
-\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \}}}
-\DoxyCodeLine{00075\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00010}\mbox{\hyperlink{class_game_manager}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_manager}{GameManager}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00012}\mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game_manager}{GameManager}}\ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}};}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00013}\mbox{\hyperlink{class_game_manager_a6276f9bdbe9295f7060832971cc39f18}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game_manager}{GameManager}}\ \mbox{\hyperlink{class_game_manager_a6276f9bdbe9295f7060832971cc39f18}{Instance}}\ \{\ \textcolor{keyword}{get}\ \{\ \mbox{\hyperlink{class_game_manager_a1716946dffd7f7f6a9c8f46406ab0732}{Init}}();\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}};\ \}\ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00014}00014\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00015}\mbox{\hyperlink{class_game_manager_ad1da1229b13f88f464804eae45cf5566}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_input_manager}{InputManager}}\ \mbox{\hyperlink{class_game_manager_ad1da1229b13f88f464804eae45cf5566}{mInputMng}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_input_manager}{InputManager}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00016}\mbox{\hyperlink{class_game_manager_aa515072fad4240588fa694ecfe229040}{00016}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_resource_manager}{ResourceManager}}\ \mbox{\hyperlink{class_game_manager_aa515072fad4240588fa694ecfe229040}{mResourceMng}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_resource_manager}{ResourceManager}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00017}\mbox{\hyperlink{class_game_manager_a33b10a08c026c8762e08d8dc7985592c}{00017}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_pool_manager}{PoolManager}}\ \mbox{\hyperlink{class_game_manager_a33b10a08c026c8762e08d8dc7985592c}{mPoolMng}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_pool_manager}{PoolManager}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00018}\mbox{\hyperlink{class_game_manager_a6504adedf22c072c3e610e7af2778e25}{00018}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_u_i_manager}{UIManager}}\ \mbox{\hyperlink{class_game_manager_a6504adedf22c072c3e610e7af2778e25}{mUIMng}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_i_manager}{UIManager}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00019}00019\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00020}\mbox{\hyperlink{class_game_manager_a9823969455de682aa277aaecebd0b4be}{00020}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_input_manager}{InputManager}}\ \mbox{\hyperlink{class_game_manager_a9823969455de682aa277aaecebd0b4be}{InputMng}}\ =>\ \mbox{\hyperlink{class_game_manager_a6276f9bdbe9295f7060832971cc39f18}{Instance}}.\mbox{\hyperlink{class_game_manager_ad1da1229b13f88f464804eae45cf5566}{mInputMng}};}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00021}\mbox{\hyperlink{class_game_manager_a496f52583a8ea4b899679fe3254546ed}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_resource_manager}{ResourceManager}}\ \mbox{\hyperlink{class_game_manager_a496f52583a8ea4b899679fe3254546ed}{ResourceMng}}\ =>\ \mbox{\hyperlink{class_game_manager_a6276f9bdbe9295f7060832971cc39f18}{Instance}}.\mbox{\hyperlink{class_game_manager_aa515072fad4240588fa694ecfe229040}{mResourceMng}};}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00022}\mbox{\hyperlink{class_game_manager_a41f104b8b1d870b00ea3289e5b794f94}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_pool_manager}{PoolManager}}\ \mbox{\hyperlink{class_game_manager_a41f104b8b1d870b00ea3289e5b794f94}{PoolMng}}\ =>\ \mbox{\hyperlink{class_game_manager_a6276f9bdbe9295f7060832971cc39f18}{Instance}}.\mbox{\hyperlink{class_game_manager_a33b10a08c026c8762e08d8dc7985592c}{mPoolMng}};}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00023}\mbox{\hyperlink{class_game_manager_abc4ef6be32ba1c96f8e2b3b89dfba67d}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_u_i_manager}{UIManager}}\ \mbox{\hyperlink{class_game_manager_abc4ef6be32ba1c96f8e2b3b89dfba67d}{UIMng}}\ =>\ \mbox{\hyperlink{class_game_manager_a6276f9bdbe9295f7060832971cc39f18}{Instance}}.\mbox{\hyperlink{class_game_manager_a6504adedf22c072c3e610e7af2778e25}{mUIMng}};}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00026}\mbox{\hyperlink{class_game_manager_a07aaf1227e4d645f15e0a964f54ef291}{00026}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_manager_a07aaf1227e4d645f15e0a964f54ef291}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a1716946dffd7f7f6a9c8f46406ab0732}{Init}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_afcffe8329a548c8c085ea0d987613a0e}{Test}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00032}\mbox{\hyperlink{class_game_manager_aec0783b5a136e042adcc47bae4fe5291}{00032}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_manager_aec0783b5a136e042adcc47bae4fe5291}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_ad1da1229b13f88f464804eae45cf5566}{mInputMng}}.\mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{OnUpdate}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00037}\mbox{\hyperlink{class_game_manager_a1716946dffd7f7f6a9c8f46406ab0732}{00037}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_manager_a1716946dffd7f7f6a9c8f46406ab0732}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ go\ =\ GameObject.Find(\textcolor{stringliteral}{"{}@GameManager"{}});}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (go\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go\ =\ \textcolor{keyword}{new}\ GameObject\ \{\ name\ =\ \textcolor{stringliteral}{"{}@GameManager"{}}\ \};}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go.AddComponent<\mbox{\hyperlink{class_game_manager}{GameManager}}>();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ DontDestroyOnLoad(go);}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}\ =\ go.GetComponent<\mbox{\hyperlink{class_game_manager}{GameManager}}>();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a4da1a604021a2884e00475afc6cf9fc5}{sInstance}}.\mbox{\hyperlink{class_game_manager_a33b10a08c026c8762e08d8dc7985592c}{mPoolMng}}.\mbox{\hyperlink{class_pool_manager_a1e3b6d38df0786ccf7f938d60e386aae}{Init}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00058}\mbox{\hyperlink{class_game_manager_ade633bf8b439e2bb742c72215c632b19}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_manager_ade633bf8b439e2bb742c72215c632b19}{Clear}}()}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00059}00059\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_a41f104b8b1d870b00ea3289e5b794f94}{PoolMng}}.\mbox{\hyperlink{class_pool_manager_aa71d36872f416feaa853788a7a7a7ef8}{Clear}}();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00063}\mbox{\hyperlink{class_game_manager_afcffe8329a548c8c085ea0d987613a0e}{00063}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_manager_afcffe8329a548c8c085ea0d987613a0e}{Test}}()}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ List<GameObject>\ go\ =\ \textcolor{keyword}{new}\ List<GameObject>();}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ i++)}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ go.Add(\mbox{\hyperlink{class_game_manager_aa515072fad4240588fa694ecfe229040}{mResourceMng}}.\mbox{\hyperlink{class_resource_manager_a04b388e19bffc92646a7c885976a9bbd}{Instantiate}}(\textcolor{stringliteral}{"{}Cube"{}}));}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00071}00071\ \textcolor{comment}{/*\ 사용예제}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00072}00072\ \textcolor{comment}{\ \ \ \ void\ Start()}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager\ gm\ =\ GameManager.Instance;}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_game_manager_8cs_source_l00076}00076\ \textcolor{comment}{*/}}
 
 \end{DoxyCode}

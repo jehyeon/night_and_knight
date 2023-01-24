@@ -1,4 +1,4 @@
-\doxysection{Pool 클래스 참조}
+\hypertarget{class_pool}{}\doxysection{Pool 클래스 참조}
 \label{class_pool}\index{Pool@{Pool}}
 
 
@@ -8,88 +8,88 @@ Pooling한 Game\+Object들을 Stack으로 관리
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-void \textbf{ Init} (Game\+Object original, int count=5)
+void \mbox{\hyperlink{class_pool_a945f4268e790751ad785ea409f148e6b}{Init}} (Game\+Object original, int count=5)
 \item 
-void \textbf{ Push} (\textbf{ Pool\+Able} pool\+Able)
+void \mbox{\hyperlink{class_pool_a2847330763b5c96efa475b4cb63ff9d4}{Push}} (\mbox{\hyperlink{class_pool_able}{Pool\+Able}} pool\+Able)
 \item 
-\textbf{ Pool\+Able} \textbf{ Pop} (Transform parent)
+\mbox{\hyperlink{class_pool_able}{Pool\+Able}} \mbox{\hyperlink{class_pool_ad905937d335331af4f664966fb30d4a6}{Pop}} (Transform parent)
 \end{DoxyCompactItemize}
 \doxysubsection*{속성}
 \begin{DoxyCompactItemize}
 \item 
-Game\+Object \textbf{ Original}\hspace{0.3cm}{\ttfamily  [get, private set]}
+Game\+Object \mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
-Transform \textbf{ Root}\hspace{0.3cm}{\ttfamily  [get, set]}
+Transform \mbox{\hyperlink{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}{Root}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Private 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Pool\+Able} \textbf{ Create} ()
+\mbox{\hyperlink{class_pool_able}{Pool\+Able}} \mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
-Stack$<$ \textbf{ Pool\+Able} $>$ \textbf{ m\+Pool\+Stack} = new Stack$<$\textbf{ Pool\+Able}$>$()
+Stack$<$ \mbox{\hyperlink{class_pool_able}{Pool\+Able}} $>$ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{m\+Pool\+Stack}} = new Stack$<$\mbox{\hyperlink{class_pool_able}{Pool\+Able}}$>$()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{상세한 설명}
 Pooling한 Game\+Object들을 Stack으로 관리 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 9} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00009}{9}} 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{멤버 함수 문서화}
-\mbox{\label{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}} 
+\mbox{\Hypertarget{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}\label{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}} 
 \index{Pool@{Pool}!Create@{Create}}
 \index{Create@{Create}!Pool@{Pool}}
-\doxysubsubsection{Create()}
-{\footnotesize\ttfamily \textbf{ Pool\+Able} Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pool_able}{Pool\+Able}} Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 \begin{DoxyReturn}{반환값}
 원본 Game\+Object로부터 풀링에 사용할 오브젝트를 생성 후 리턴 
 \end{DoxyReturn}
 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 29} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00029}{29}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00030\ \ \ \ \ \{}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ GameObject\ go\ =\ Object.Instantiate(Original);}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ go.name\ =\ Original.name;}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ go.GetOrAddComponent<PoolAble>();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ GameObject\ go\ =\ Object.Instantiate(\mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}});}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ go.name\ =\ \mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}}.name;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ go.GetOrAddComponent<\mbox{\hyperlink{class_pool_able}{PoolAble}}>();}
 \DoxyCodeLine{00034\ \ \ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\label{class_pool_a945f4268e790751ad785ea409f148e6b}} 
+\mbox{\Hypertarget{class_pool_a945f4268e790751ad785ea409f148e6b}\label{class_pool_a945f4268e790751ad785ea409f148e6b}} 
 \index{Pool@{Pool}!Init@{Init}}
 \index{Init@{Init}!Pool@{Pool}}
-\doxysubsubsection{Init()}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
 {\footnotesize\ttfamily void Init (\begin{DoxyParamCaption}\item[{Game\+Object}]{original,  }\item[{int}]{count = {\ttfamily 5} }\end{DoxyParamCaption})}
 
 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 16} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00016}{16}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00017\ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ Original\ =\ original;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Root\ =\ \textcolor{keyword}{new}\ GameObject().transform;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}}\ =\ original;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}{Root}}\ =\ \textcolor{keyword}{new}\ GameObject().transform;}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Root.name\ =\ \$\textcolor{stringliteral}{"{}\{Original.name\}\_Root"{}};}
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ i++)}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ Push(Create());}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a2847330763b5c96efa475b4cb63ff9d4}{Push}}(\mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}}());}
 \DoxyCodeLine{00024\ \ \ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\label{class_pool_ad905937d335331af4f664966fb30d4a6}} 
+\mbox{\Hypertarget{class_pool_ad905937d335331af4f664966fb30d4a6}\label{class_pool_ad905937d335331af4f664966fb30d4a6}} 
 \index{Pool@{Pool}!Pop@{Pop}}
 \index{Pop@{Pop}!Pool@{Pool}}
-\doxysubsubsection{Pop()}
-{\footnotesize\ttfamily \textbf{ Pool\+Able} Pop (\begin{DoxyParamCaption}\item[{Transform}]{parent }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Pop()}{Pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pool_able}{Pool\+Able}} Pop (\begin{DoxyParamCaption}\item[{Transform}]{parent }\end{DoxyParamCaption})}
 
 
 \begin{DoxyParams}{매개변수}
@@ -97,21 +97,21 @@ Pooling한 Game\+Object들을 Stack으로 관리
 \hline
 \end{DoxyParams}
 \begin{DoxyRefDesc}{할일}
-\item[\textbf{ 할일}]Dont\+Destroy\+On\+Load 해제용 코드 구현 \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000001}{할일}}]Dont\+Destroy\+On\+Load 해제용 코드 구현 \end{DoxyRefDesc}
 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 54} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00054}{54}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00055\ \ \ \ \ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ PoolAble\ poolAble;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_able}{PoolAble}}\ poolAble;}
 \DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPoolStack.Count\ >\ 0)}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ mPoolStack.Pop();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Count\ >\ 0)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Pop();}
 \DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ Create();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}}();}
 \DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{true});}
@@ -127,11 +127,11 @@ Pooling한 Game\+Object들을 Stack으로 관리
 \DoxyCodeLine{00075\ \ \ \ \ \}}
 
 \end{DoxyCode}
-\mbox{\label{class_pool_a2847330763b5c96efa475b4cb63ff9d4}} 
+\mbox{\Hypertarget{class_pool_a2847330763b5c96efa475b4cb63ff9d4}\label{class_pool_a2847330763b5c96efa475b4cb63ff9d4}} 
 \index{Pool@{Pool}!Push@{Push}}
 \index{Push@{Push}!Pool@{Pool}}
-\doxysubsubsection{Push()}
-{\footnotesize\ttfamily void Push (\begin{DoxyParamCaption}\item[{\textbf{ Pool\+Able}}]{pool\+Able }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily void Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pool_able}{Pool\+Able}}}]{pool\+Able }\end{DoxyParamCaption})}
 
 
 \begin{DoxyParams}{매개변수}
@@ -140,61 +140,61 @@ Pooling한 Game\+Object들을 Stack으로 관리
 \end{DoxyParams}
 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 39} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00039}{39}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00040\ \ \ \ \ \{}
 \DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (poolAble\ ==\ \textcolor{keyword}{null})}
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ Root;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ \mbox{\hyperlink{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}{Root}};}
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{false});}
 \DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ poolAble.IsUsing\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ mPoolStack.Push(poolAble);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Push(poolAble);}
 \DoxyCodeLine{00048\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{멤버 데이터 문서화}
-\mbox{\label{class_pool_a86a494509dc100f7324bf877de0fb4cc}} 
+\mbox{\Hypertarget{class_pool_a86a494509dc100f7324bf877de0fb4cc}\label{class_pool_a86a494509dc100f7324bf877de0fb4cc}} 
 \index{Pool@{Pool}!mPoolStack@{mPoolStack}}
 \index{mPoolStack@{mPoolStack}!Pool@{Pool}}
-\doxysubsubsection{mPoolStack}
-{\footnotesize\ttfamily Stack$<$\textbf{ Pool\+Able}$>$ m\+Pool\+Stack = new Stack$<$\textbf{ Pool\+Able}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+\doxysubsubsection{\texorpdfstring{mPoolStack}{mPoolStack}}
+{\footnotesize\ttfamily Stack$<$\mbox{\hyperlink{class_pool_able}{Pool\+Able}}$>$ m\+Pool\+Stack = new Stack$<$\mbox{\hyperlink{class_pool_able}{Pool\+Able}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 11} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{속성 문서화}
-\mbox{\label{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}} 
+\mbox{\Hypertarget{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}\label{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}} 
 \index{Pool@{Pool}!Original@{Original}}
 \index{Original@{Original}!Pool@{Pool}}
-\doxysubsubsection{Original}
+\doxysubsubsection{\texorpdfstring{Original}{Original}}
 {\footnotesize\ttfamily Game\+Object Original\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 13} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00013\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
-\mbox{\label{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}} 
+\mbox{\Hypertarget{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}\label{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}} 
 \index{Pool@{Pool}!Root@{Root}}
 \index{Root@{Root}!Pool@{Pool}}
-\doxysubsubsection{Root}
+\doxysubsubsection{\texorpdfstring{Root}{Root}}
 {\footnotesize\ttfamily Transform Root\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
-\textbf{ Pool.\+cs} 파일의 \textbf{ 14} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
@@ -205,4 +205,4 @@ Pooling한 Game\+Object들을 Stack으로 관리
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/ddino/\+Documents/\+Work\+Space/\+Unity\+Projects/alpha-\/project/night\+\_\+and\+\_\+knight/\+Assets/\+C\#/\+Pool/\textbf{ Pool.\+cs}\end{DoxyCompactItemize}
+C\+:/\+Users/ddino/\+Documents/\+Work\+Space/\+Unity\+Projects/alpha-\/project/night\+\_\+and\+\_\+knight/\+Assets/\+C\#/\+Pool/\mbox{\hyperlink{_pool_8cs}{Pool.\+cs}}\end{DoxyCompactItemize}

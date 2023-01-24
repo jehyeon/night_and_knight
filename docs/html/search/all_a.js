@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['resourcemanager_0',['ResourceManager',['../class_resource_manager.html',1,'']]],
-  ['resourcemanager_2ecs_1',['ResourceManager.cs',['../_resource_manager_8cs.html',1,'']]],
-  ['resourcemng_2',['ResourceMng',['../class_game_manager.html#a496f52583a8ea4b899679fe3254546ed',1,'GameManager']]],
-  ['root_3',['Root',['../class_u_i_manager.html#a9b07d4317d951d5a4f0bce4f1a405561',1,'UIManager.Root()'],['../class_pool.html#a9d91c97d93a244c5c2a401c64d3553d9',1,'Pool.Root()']]]
+  ['onbuttonclicked_0',['OnButtonClicked',['../class_u_i___button.html#a85049360b699f9def5ae06e08bede360',1,'UI_Button']]],
+  ['onclickhandler_1',['OnClickHandler',['../class_u_i___event_handler.html#a63853a9c7eac222f1974d1f48f6333e7',1,'UI_EventHandler']]],
+  ['ondrag_2',['OnDrag',['../class_u_i___event_handler.html#af62aada4493e42d098235d6af8b793ec',1,'UI_EventHandler']]],
+  ['ondraghandler_3',['OnDragHandler',['../class_u_i___event_handler.html#a4b60a118f52bf9e8ffd2b9d49d0cf3b4',1,'UI_EventHandler']]],
+  ['onpointerclick_4',['OnPointerClick',['../class_u_i___event_handler.html#a75a4898ac9f2340bc0e07be6ee5f3a96',1,'UI_EventHandler']]],
+  ['onupdate_5',['OnUpdate',['../class_input_manager.html#a77491714662f827ac632c2eee20f8963',1,'InputManager']]],
+  ['original_6',['Original',['../class_pool.html#a0f4732a8569e5c24ebaebd2a9ddb6ec9',1,'Pool']]]
 ];

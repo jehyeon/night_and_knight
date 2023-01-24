@@ -1,6 +1,14 @@
 var hierarchy =
 [
+    [ "Define", "class_define.html", null ],
+    [ "Extension", "class_extension.html", null ],
+    [ "IDragHandler", null, [
+      [ "UI_EventHandler", "class_u_i___event_handler.html", null ]
+    ] ],
     [ "InputManager", "class_input_manager.html", null ],
+    [ "IPointerClickHandler", null, [
+      [ "UI_EventHandler", "class_u_i___event_handler.html", null ]
+    ] ],
     [ "MonoBehaviour", null, [
       [ "DataManager", "class_data_manager.html", null ],
       [ "GameManager", "class_game_manager.html", null ],
@@ -13,7 +21,9 @@ var hierarchy =
           [ "UI_Button", "class_u_i___button.html", null ]
         ] ],
         [ "UI_Scene", "class_u_i___scene.html", null ]
-      ] ]
+      ] ],
+      [ "UI_EventHandler", "class_u_i___event_handler.html", null ],
+      [ "Util", "class_util.html", null ]
     ] ],
     [ "Pool", "class_pool.html", null ],
     [ "PoolManager", "class_pool_manager.html", null ],

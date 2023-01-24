@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_0',['Update',['../class_data_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'DataManager.Update()'],['../class_game_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'GameManager.Update()'],['../class_map_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'MapManager.Update()'],['../class_scene_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'SceneManager.Update()'],['../class_sound_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'SoundManager.Update()']]]
+  ['test_0',['Test',['../class_game_manager.html#afcffe8329a548c8c085ea0d987613a0e',1,'GameManager']]]
 ];

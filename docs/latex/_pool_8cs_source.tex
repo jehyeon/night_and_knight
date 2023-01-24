@@ -1,69 +1,69 @@
-\doxysection{Pool.\+cs}
+\hypertarget{_pool_8cs_source}{}\doxysection{Pool.\+cs}
 \label{_pool_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Pool/Pool.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/Pool/Pool.cs}}
-\textbf{ 이 파일의 문서화 페이지로 가기}
+\mbox{\hyperlink{_pool_8cs}{이 파일의 문서화 페이지로 가기}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System.Collections;}
-\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
-\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }Unity.VisualScripting;}
-\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }UnityEngine;}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Pool}
-\DoxyCodeLine{00010\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}\ Stack<PoolAble>\ mPoolStack\ =\ \textcolor{keyword}{new}\ Stack<PoolAble>();}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ Original\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}\ Transform\ Root\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Init(GameObject\ original,\ \textcolor{keywordtype}{int}\ count\ =\ 5)}
-\DoxyCodeLine{00017\ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ Original\ =\ original;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Root\ =\ \textcolor{keyword}{new}\ GameObject().transform;}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Root.name\ =\ \$\textcolor{stringliteral}{"{}\{Original.name\}\_Root"{}};}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ i++)}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ Push(Create());}
-\DoxyCodeLine{00024\ \ \ \ \ \}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00029\ \ \ \ \ PoolAble\ Create()}
-\DoxyCodeLine{00030\ \ \ \ \ \{}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ GameObject\ go\ =\ Object.Instantiate(Original);}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ go.name\ =\ Original.name;}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ go.GetOrAddComponent<PoolAble>();}
-\DoxyCodeLine{00034\ \ \ \ \ \}}
-\DoxyCodeLine{00035\ \ \ \ \ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Push(PoolAble\ poolAble)}
-\DoxyCodeLine{00040\ \ \ \ \ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (poolAble\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ Root;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{false});}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ poolAble.IsUsing\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ mPoolStack.Push(poolAble);}
-\DoxyCodeLine{00048\ \ \ \ \ \}}
-\DoxyCodeLine{00049\ \ \ \ \ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}\ PoolAble\ Pop(Transform\ parent)}
-\DoxyCodeLine{00055\ \ \ \ \ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ PoolAble\ poolAble;}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPoolStack.Count\ >\ 0)}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ mPoolStack.Pop();}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ Create();}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{true});}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (parent\ ==\ null)\ }}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ poolAble.transform.parent\ =\ GameManager.SceneMng.CurrentScene.transform;*/}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ parent;}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ poolAble.IsUsing\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ poolAble;}
-\DoxyCodeLine{00075\ \ \ \ \ \}}
-\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00009}\mbox{\hyperlink{class_pool}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pool}{Pool}}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00011}\mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{00011}}\ \ \ \ \ \textcolor{keyword}{private}\ Stack<PoolAble>\ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}\ =\ \textcolor{keyword}{new}\ Stack<PoolAble>();}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00013}\mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00014}\mbox{\hyperlink{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ Transform\ \mbox{\hyperlink{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}{Root}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00016}\mbox{\hyperlink{class_pool_a945f4268e790751ad785ea409f148e6b}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pool_a945f4268e790751ad785ea409f148e6b}{Init}}(GameObject\ original,\ \textcolor{keywordtype}{int}\ count\ =\ 5)}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}}\ =\ original;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}{Root}}\ =\ \textcolor{keyword}{new}\ GameObject().transform;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ Root.name\ =\ \$\textcolor{stringliteral}{"{}\{Original.name\}\_Root"{}};}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a2847330763b5c96efa475b4cb63ff9d4}{Push}}(\mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}}());}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00029}\mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{00029}}\ \ \ \ \ \mbox{\hyperlink{class_pool_able}{PoolAble}}\ \mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}}()}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ GameObject\ go\ =\ Object.Instantiate(\mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}});}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ go.name\ =\ \mbox{\hyperlink{class_pool_a0f4732a8569e5c24ebaebd2a9ddb6ec9}{Original}}.name;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ go.GetOrAddComponent<\mbox{\hyperlink{class_pool_able}{PoolAble}}>();}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00035}00035\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00039}\mbox{\hyperlink{class_pool_a2847330763b5c96efa475b4cb63ff9d4}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pool_a2847330763b5c96efa475b4cb63ff9d4}{Push}}(\mbox{\hyperlink{class_pool_able}{PoolAble}}\ poolAble)}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (poolAble\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ \mbox{\hyperlink{class_pool_a9d91c97d93a244c5c2a401c64d3553d9}{Root}};}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ poolAble.IsUsing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Push(poolAble);}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00049}00049\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00054}\mbox{\hyperlink{class_pool_ad905937d335331af4f664966fb30d4a6}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pool_able}{PoolAble}}\ \mbox{\hyperlink{class_pool_ad905937d335331af4f664966fb30d4a6}{Pop}}(Transform\ parent)}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00055}00055\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_able}{PoolAble}}\ poolAble;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Count\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Pop();}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}}();}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (parent\ ==\ null)\ }}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ poolAble.transform.parent\ =\ GameManager.SceneMng.CurrentScene.transform;*/}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ parent;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ poolAble.IsUsing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ poolAble;}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pool_8cs_source_l00076}00076\ \}}
 
 \end{DoxyCode}
