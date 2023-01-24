@@ -5,6 +5,7 @@ using UnityEngine;
 /**
  * @brief 전역으로 게임 전체와 다른 Manager를 관리하는 Manager
  * @details 싱글톤 패턴 적용
+ * @see asdf
  */
 public class GameManager : MonoBehaviour
 {
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
     }
 }
 
-/* @see
+/* 사용예제
     void Start()
     {
         GameManager gm = GameManager.Instance;
