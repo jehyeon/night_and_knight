@@ -19,7 +19,7 @@ var hierarchy =
       [ "Test", "class_test.html", null ],
       [ "UI_Base", "class_u_i___base.html", [
         [ "UI_Popup", "class_u_i___popup.html", [
-          [ "UI_Button", "class_u_i___button.html", null ]
+          [ "Test_Popup", "class_test___popup.html", null ]
         ] ],
         [ "UI_Scene", "class_u_i___scene.html", null ]
       ] ],

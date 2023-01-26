@@ -1,7 +1,7 @@
 var searchData=
 [
   ['minputmng_0',['mInputMng',['../class_game_manager.html#ad1da1229b13f88f464804eae45cf5566',1,'GameManager']]],
-  ['mmoney_1',['mMoney',['../class_u_i___button.html#af73e100fde1318f57cf57570b459af6d',1,'UI_Button']]],
+  ['mmoney_1',['mMoney',['../class_test___popup.html#af73e100fde1318f57cf57570b459af6d',1,'Test_Popup']]],
   ['mobjectdic_2',['mObjectDic',['../class_u_i___base.html#ab1690a24229219f92af044fe8d89aa88',1,'UI_Base']]],
   ['morder_3',['mOrder',['../class_u_i_manager.html#ad9548c3722176e3c7393150195ccda8e',1,'UIManager']]],
   ['mpooldic_4',['mPoolDic',['../class_pool_manager.html#a6cd36262ec76d9281c7d697574dce7d2',1,'PoolManager']]],

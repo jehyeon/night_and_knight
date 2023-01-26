@@ -127,8 +127,8 @@ Protected 멤버 함수</h2></td></tr>
 <tr class="separator:a293b3cca54ae15b7488909f8ba1b5fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1ae6372673a56278bf761d700ae2b82"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#ab1ae6372673a56278bf761d700ae2b82">GetObject</a> (int idx)</td></tr>
 <tr class="separator:ab1ae6372673a56278bf761d700ae2b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd167ffca70834ffc145b70586116eea"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#afd167ffca70834ffc145b70586116eea">GetText</a> (int idx)</td></tr>
-<tr class="separator:afd167ffca70834ffc145b70586116eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bf1d664f30ab5333ac1807ed1f471b"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#ab0bf1d664f30ab5333ac1807ed1f471b">GetText</a> (int idx)</td></tr>
+<tr class="separator:ab0bf1d664f30ab5333ac1807ed1f471b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a020946bab466c5c0ead9a2dab5a42b7b"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#a020946bab466c5c0ead9a2dab5a42b7b">GetButton</a> (int idx)</td></tr>
 <tr class="separator:a020946bab466c5c0ead9a2dab5a42b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4503b80a59127313ba02caeed6fe7d3d"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#a4503b80a59127313ba02caeed6fe7d3d">GetImage</a> (int idx)</td></tr>
@@ -175,25 +175,25 @@ Protected 속성</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                              : UnityEngine.Object</div>
-<div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordtype">string</span>[] uiNames = Enum.GetNames(type);</div>
-<div class="line"><span class="lineno">   23</span>        UnityEngine.Object[] objects = <span class="keyword">new</span> UnityEngine.Object[uiNames.Length];</div>
-<div class="line"><span class="lineno">   24</span>        <a class="code hl_variable" href="class_u_i___base.html#ab1690a24229219f92af044fe8d89aa88">mObjectDic</a>.Add(typeof(T), objects);</div>
-<div class="line"><span class="lineno">   25</span> </div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; uiNames.Length; i++)</div>
-<div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (typeof(T) == typeof(GameObject))</div>
-<div class="line"><span class="lineno">   29</span>                objects[i] = <a class="code hl_class" href="class_util.html">Util</a>.<a class="code hl_function" href="class_util.html#a7d029f1f523fabef49f2be1d73807582">FindChild</a>(gameObject, uiNames[i], <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   31</span>                objects[i] = <a class="code hl_class" href="class_util.html">Util</a>.<a class="code hl_function" href="class_util.html#a7d029f1f523fabef49f2be1d73807582">FindChild</a>&lt;T&gt;(gameObject, uiNames[i], <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   32</span>            </div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (objects[i] == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   34</span>                Debug.Log(($<span class="stringliteral">&quot;Failed to bind({uiNames[i]})&quot;</span>));</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="ttc" id="aclass_u_i___base_html_ab1690a24229219f92af044fe8d89aa88"><div class="ttname"><a href="class_u_i___base.html#ab1690a24229219f92af044fe8d89aa88">UI_Base.mObjectDic</a></div><div class="ttdeci">Dictionary&lt; Type, UnityEngine.Object[]&gt; mObjectDic</div><div class="ttdef"><b>Definition:</b> <a href="_u_i___base_8cs_source.html#l00013">UI_Base.cs:13</a></div></div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                              : UnityEngine.Object</div>
+<div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordtype">string</span>[] uiNames = Enum.GetNames(type);</div>
+<div class="line"><span class="lineno">   24</span>        UnityEngine.Object[] objects = <span class="keyword">new</span> UnityEngine.Object[uiNames.Length];</div>
+<div class="line"><span class="lineno">   25</span>        <a class="code hl_variable" href="class_u_i___base.html#ab1690a24229219f92af044fe8d89aa88">mObjectDic</a>.Add(typeof(T), objects);</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; uiNames.Length; i++)</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span> (typeof(T) == typeof(GameObject))</div>
+<div class="line"><span class="lineno">   30</span>                objects[i] = <a class="code hl_class" href="class_util.html">Util</a>.<a class="code hl_function" href="class_util.html#a7d029f1f523fabef49f2be1d73807582">FindChild</a>(gameObject, uiNames[i], <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   32</span>                objects[i] = <a class="code hl_class" href="class_util.html">Util</a>.<a class="code hl_function" href="class_util.html#a7d029f1f523fabef49f2be1d73807582">FindChild</a>&lt;T&gt;(gameObject, uiNames[i], <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   33</span>            </div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (objects[i] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   35</span>                Debug.Log(($<span class="stringliteral">&quot;Failed to bind({uiNames[i]})&quot;</span>));</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="ttc" id="aclass_u_i___base_html_ab1690a24229219f92af044fe8d89aa88"><div class="ttname"><a href="class_u_i___base.html#ab1690a24229219f92af044fe8d89aa88">UI_Base.mObjectDic</a></div><div class="ttdeci">Dictionary&lt; Type, UnityEngine.Object[]&gt; mObjectDic</div><div class="ttdef"><b>Definition:</b> <a href="_u_i___base_8cs_source.html#l00014">UI_Base.cs:14</a></div></div>
 <div class="ttc" id="aclass_util_html"><div class="ttname"><a href="class_util.html">Util</a></div><div class="ttdef"><b>Definition:</b> <a href="_util_8cs_source.html#l00008">Util.cs:9</a></div></div>
 <div class="ttc" id="aclass_util_html_a7d029f1f523fabef49f2be1d73807582"><div class="ttname"><a href="class_util.html#a7d029f1f523fabef49f2be1d73807582">Util.FindChild</a></div><div class="ttdeci">static GameObject FindChild(GameObject go, string name=null, bool recursive=false)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cs_source.html#l00062">Util.cs:62</a></div></div>
 </div><!-- fragment -->
@@ -239,22 +239,22 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>    {</div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a> evt = <a class="code hl_class" href="class_util.html">Util</a>.GetOrAddComponent&lt;<a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a>&gt;(go);</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">switch</span> (type)</div>
-<div class="line"><span class="lineno">   81</span>        {</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Click:</div>
-<div class="line"><span class="lineno">   83</span>                evt.OnClickHandler -= action;</div>
-<div class="line"><span class="lineno">   84</span>                evt.OnClickHandler += action;</div>
-<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Drag:</div>
-<div class="line"><span class="lineno">   87</span>                evt.OnDragHandler -= action;</div>
-<div class="line"><span class="lineno">   88</span>                evt.OnDragHandler += action;</div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-<div class="line"><span class="lineno">   91</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a> evt = <a class="code hl_class" href="class_util.html">Util</a>.GetOrAddComponent&lt;<a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a>&gt;(go);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Click:</div>
+<div class="line"><span class="lineno">   84</span>                evt.OnClickHandler -= action;</div>
+<div class="line"><span class="lineno">   85</span>                evt.OnClickHandler += action;</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Drag:</div>
+<div class="line"><span class="lineno">   88</span>                evt.OnDragHandler -= action;</div>
+<div class="line"><span class="lineno">   89</span>                evt.OnDragHandler += action;</div>
+<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
 <div class="ttc" id="aclass_define_html"><div class="ttname"><a href="class_define.html">Define</a></div><div class="ttdoc">enum 정의</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00004">Define.cs:5</a></div></div>
 <div class="ttc" id="aclass_define_html_a42845c46592624ff0de829dd2ee92ee6"><div class="ttname"><a href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">Define.UIEvent</a></div><div class="ttdeci">UIEvent</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00006">Define.cs:7</a></div></div>
 <div class="ttc" id="aclass_u_i___event_handler_html"><div class="ttname"><a href="class_u_i___event_handler.html">UI_EventHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_i___event_handler_8cs_source.html#l00010">UI_EventHandler.cs:11</a></div></div>
@@ -293,15 +293,15 @@ Protected 속성</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                        : UnityEngine.Object</div>
-<div class="line"><span class="lineno">   43</span>    {</div>
-<div class="line"><span class="lineno">   44</span>        UnityEngine.Object[] objects;</div>
-<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i___base.html#ab1690a24229219f92af044fe8d89aa88">mObjectDic</a>.TryGetValue(typeof(T), out objects) == <span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> objects[idx] as T;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                        : UnityEngine.Object</div>
+<div class="line"><span class="lineno">   44</span>    {</div>
+<div class="line"><span class="lineno">   45</span>        UnityEngine.Object[] objects;</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i___base.html#ab1690a24229219f92af044fe8d89aa88">mObjectDic</a>.TryGetValue(typeof(T), out objects) == <span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> objects[idx] as T;</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -329,10 +329,10 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">return</span> Get&lt;Button&gt;(idx);</div>
-<div class="line"><span class="lineno">   64</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> Get&lt;Button&gt;(idx);</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -360,10 +360,10 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>    {</div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">return</span> Get&lt;Image&gt;(idx);</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> Get&lt;Image&gt;(idx);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -391,15 +391,15 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> Get&lt;GameObject&gt;(idx);</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> Get&lt;GameObject&gt;(idx);</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="afd167ffca70834ffc145b70586116eea" name="afd167ffca70834ffc145b70586116eea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd167ffca70834ffc145b70586116eea">&#9670;&#160;</a></span>GetText()</h2>
+<a id="ab0bf1d664f30ab5333ac1807ed1f471b" name="ab0bf1d664f30ab5333ac1807ed1f471b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bf1d664f30ab5333ac1807ed1f471b">&#9670;&#160;</a></span>GetText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +408,7 @@ Protected 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Text GetText </td>
+          <td class="memname">TextMeshProUGUI GetText </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idx</em></td><td>)</td>
@@ -422,10 +422,10 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">return</span> Get&lt;Text&gt;(idx);</div>
-<div class="line"><span class="lineno">   59</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> Get&lt;TextMeshProUGUI&gt;(idx);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -460,7 +460,7 @@ Protected 속성</h2></td></tr>
 <div class="line"><span class="lineno">   10</span>    }</div>
 <div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">전역으로 게임 전체와 다른 Manager를 관리하는 Manager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00010">GameManager.cs:11</a></div></div>
 <div class="ttc" id="aclass_game_manager_html_abc4ef6be32ba1c96f8e2b3b89dfba67d"><div class="ttname"><a href="class_game_manager.html#abc4ef6be32ba1c96f8e2b3b89dfba67d">GameManager.UIMng</a></div><div class="ttdeci">static UIManager UIMng</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00023">GameManager.cs:23</a></div></div>
-<div class="ttc" id="aclass_u_i_manager_html_a9927b92157fc265e61799437bc3d0c34"><div class="ttname"><a href="class_u_i_manager.html#a9927b92157fc265e61799437bc3d0c34">UIManager.SetCanvas</a></div><div class="ttdeci">void SetCanvas(GameObject go, bool sort=true)</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00031">UIManager.cs:31</a></div></div>
+<div class="ttc" id="aclass_u_i_manager_html_a9927b92157fc265e61799437bc3d0c34"><div class="ttname"><a href="class_u_i_manager.html#a9927b92157fc265e61799437bc3d0c34">UIManager.SetCanvas</a></div><div class="ttdeci">void SetCanvas(GameObject go, bool sort=true)</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00032">UIManager.cs:32</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -485,12 +485,12 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-project/night_and_knight/Assets/C#/UI/<a class="el" href="_u_i___scene_8cs_source.html">UI_Scene.cs</a></li>
+<li>C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-project/night_and_knight/Assets/C#/UI/SceneUI/<a class="el" href="_u_i___scene_8cs_source.html">UI_Scene.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

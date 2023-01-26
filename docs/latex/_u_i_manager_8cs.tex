@@ -23,42 +23,42 @@ class \mbox{\hyperlink{class_u_i_manager}{UIManager}}
 
 
 
-\mbox{\hyperlink{_u_i_manager_8cs_source}{UIManager.\+cs}} 파일의 \mbox{\hyperlink{_u_i_manager_8cs_source_l00085}{85}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_u_i_manager_8cs_source}{UIManager.\+cs}} 파일의 \mbox{\hyperlink{_u_i_manager_8cs_source_l00086}{86}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00086\ \{}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPopupStack.Count\ ==\ 0)}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popupUI=\ mPopupStack.Pop();}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a496f52583a8ea4b899679fe3254546ed}{ResourceMng}}.\mbox{\hyperlink{class_resource_manager_a3d8540720596e320425d0cfca291255b}{Destroy}}(popupUI.gameObject);}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ popupUI\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ mOrder-\/-\/;}
-\DoxyCodeLine{00094\ \ \ \ \ \}}
-\DoxyCodeLine{00095\ \ \ \ \ }
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ClosePopupUI(\mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popup) }
-\DoxyCodeLine{00100\ \ \ \ \ \{}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPopupStack.Count\ ==\ 0)}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPopupStack.Peek()\ !=\ popup)}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Close\ Popup\ Failed"{}});}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ ClosePopupUI();}
-\DoxyCodeLine{00111\ \ \ \ \ \}}
-\DoxyCodeLine{00112\ \ \ \ \ }
-\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ CloseAllPopupUI() }
-\DoxyCodeLine{00117\ \ \ \ \ \{}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (mPopupStack.Count\ >\ 0)}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ ClosePopupUI();}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00122\ \ \ \ \ \}}
-\DoxyCodeLine{00123\ \}}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPopupStack.Count\ ==\ 0)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popupUI=\ mPopupStack.Pop();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a496f52583a8ea4b899679fe3254546ed}{ResourceMng}}.\mbox{\hyperlink{class_resource_manager_a3d8540720596e320425d0cfca291255b}{Destroy}}(popupUI.gameObject);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ popupUI\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ mOrder-\/-\/;}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ ClosePopupUI(\mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popup) }
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPopupStack.Count\ ==\ 0)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mPopupStack.Peek()\ !=\ popup)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Close\ Popup\ Failed"{}});}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ ClosePopupUI();}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ CloseAllPopupUI() }
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (mPopupStack.Count\ >\ 0)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ ClosePopupUI();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{_u_i_manager_8cs_ac1d33567e572214b9e83904f5f25d132}\label{_u_i_manager_8cs_ac1d33567e572214b9e83904f5f25d132}} 
@@ -69,10 +69,10 @@ class \mbox{\hyperlink{class_u_i_manager}{UIManager}}
 
 
 
-\mbox{\hyperlink{_u_i_manager_8cs_source}{UIManager.\+cs}} 파일의 \mbox{\hyperlink{_u_i_manager_8cs_source_l00068}{68}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_u_i_manager_8cs_source}{UIManager.\+cs}} 파일의 \mbox{\hyperlink{_u_i_manager_8cs_source_l00069}{69}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00068\ :\ \mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}}
+\DoxyCodeLine{00069\ :\ \mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}}
 
 \end{DoxyCode}
