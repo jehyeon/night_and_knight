@@ -1,21 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UI_Button : UI_Popup
+/*
+ * @brief TEST CODE
+ */
+public class Test_Popup : UI_Popup
 {
     enum Buttons
     {
-        PointButton
+        MoneyButton
     }
 
     enum Texts
     {
-        PointText,
+        MoneyButtonText,
         MoneyText
     }
 
@@ -39,12 +43,12 @@ public class UI_Button : UI_Popup
         base.Init();
         
         Bind<Button>(typeof(Buttons));
-        Bind<Text>(typeof(Texts));
+        Bind<TextMeshProUGUI>(typeof(Texts));
         Bind<GameObject>(typeof(GameObjects));
         Bind<Image>(typeof(Images));
         
-        // !!Test Code
-        GetButton((int)Buttons.PointButton).gameObject.BindEvent(OnButtonClicked);
+        GetButton((int)Buttons.MoneyButton).gameObject.BindEvent(OnButtonClicked, Define.UIEvent.Click);
+        GetImage((int)Images.ItemIcon).gameObject.BindEvent(OnDrag, Define.UIEvent.Drag);
     }
 
     private int mMoney = 0;
@@ -52,5 +56,11 @@ public class UI_Button : UI_Popup
     {
         mMoney++;
         GetText((int)Texts.MoneyText).text = $"Money: {mMoney}";
+    }
+
+    public void OnDrag(PointerEventData data)
+    {
+        print("drag");
+        GetImage((int)Images.ItemIcon).transform.position = data.position;
     }
 }

@@ -19,6 +19,7 @@ public class UIManager
             GameObject root = GameObject.Find("@UI_Root");
             if (root == null)
                 root = new GameObject { name = "@UI_Root" };
+            Object.DontDestroyOnLoad(root);
             
             return root;
         }

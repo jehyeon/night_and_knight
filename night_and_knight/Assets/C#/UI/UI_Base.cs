@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public abstract class UI_Base : MonoBehaviour
     public abstract void Init();
 
     /*
-     * @param T컴포넌트를 가지고 있는 모든 GameObject를 검색해 mObjectDic에 Add
+     * @param T컴포넌트를 가지고 있는 모든 자식 GameObject를 검색해 mObjectDic에 Add
      */ 
     protected void Bind<T>(Type type) where T : UnityEngine.Object
     {
@@ -53,9 +54,9 @@ public abstract class UI_Base : MonoBehaviour
         return Get<GameObject>(idx);
     }
 
-    protected Text GetText(int idx)
+    protected TextMeshProUGUI GetText(int idx)
     {
-        return Get<Text>(idx);
+        return Get<TextMeshProUGUI>(idx);
     }
 
     protected Button GetButton(int idx)

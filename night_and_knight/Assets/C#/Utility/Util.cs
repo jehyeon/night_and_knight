@@ -57,7 +57,7 @@ public class Util : MonoBehaviour
 
     /**
      * @param FindChild<Transform>에 파라미터를 그대로 넣어서 실행하여 gameObject 검색
-     * @return 해당 gameObject 리턴
+     * @return 해당 GameObject 리턴
      */
     public static GameObject FindChild(GameObject go, string name = null, bool recursive = false)
     {
