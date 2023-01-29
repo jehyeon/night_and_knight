@@ -8,10 +8,12 @@ var class_game_manager =
     [ "mPoolMng", "class_game_manager.html#a33b10a08c026c8762e08d8dc7985592c", null ],
     [ "mResourceMng", "class_game_manager.html#aa515072fad4240588fa694ecfe229040", null ],
     [ "mUIMng", "class_game_manager.html#a6504adedf22c072c3e610e7af2778e25", null ],
+    [ "sceneMng", "class_game_manager.html#a0d9d6ca0ce454392e4f6ef2c824e8a15", null ],
     [ "sInstance", "class_game_manager.html#a4da1a604021a2884e00475afc6cf9fc5", null ],
     [ "InputMng", "class_game_manager.html#a9823969455de682aa277aaecebd0b4be", null ],
     [ "Instance", "class_game_manager.html#a6276f9bdbe9295f7060832971cc39f18", null ],
     [ "PoolMng", "class_game_manager.html#a41f104b8b1d870b00ea3289e5b794f94", null ],
     [ "ResourceMng", "class_game_manager.html#a496f52583a8ea4b899679fe3254546ed", null ],
+    [ "SceneMng", "class_game_manager.html#a77885fb8371a21ac5e9022a297058f29", null ],
     [ "UIMng", "class_game_manager.html#abc4ef6be32ba1c96f8e2b3b89dfba67d", null ]
 ];

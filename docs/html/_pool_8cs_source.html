@@ -133,29 +133,30 @@ $(document).ready(function(){initNavTree('_pool_8cs_source.html',''); initResiza
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Push(poolAble);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_pool.html#ad905937d335331af4f664966fb30d4a6">   54</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_pool_able.html">PoolAble</a> <a class="code hl_function" href="class_pool.html#ad905937d335331af4f664966fb30d4a6">Pop</a>(Transform parent)</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_class" href="class_pool_able.html">PoolAble</a> poolAble;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Count &gt; 0)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            poolAble = <a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Pop();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            poolAble = <a class="code hl_function" href="class_pool.html#ab27bd35e14dcc2bb8a668d7675d00978">Create</a>();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        poolAble.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>         <span class="comment">// if (parent == null) </span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>         <span class="comment">//     poolAble.transform.parent = GameManager.SceneMng.CurrentScene.transform;*/</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        poolAble.transform.parent = parent;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        poolAble.IsUsing = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> poolAble;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_pool.html#ad905937d335331af4f664966fb30d4a6">   53</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="class_pool_able.html">PoolAble</a> <a class="code hl_function" href="class_pool.html#ad905937d335331af4f664966fb30d4a6">Pop</a>(Transform parent)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="class_pool_able.html">PoolAble</a> poolAble;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Count &gt; 0)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            poolAble = <a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Pop();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            poolAble = <a class="code hl_function" href="class_pool.html#ab27bd35e14dcc2bb8a668d7675d00978">Create</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        poolAble.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>) </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            poolAble.transform.parent = <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#a77885fb8371a21ac5e9022a297058f29">SceneMng</a>.<a class="code hl_property" href="class_scene_manager_ex.html#af7617a6051386311326b132cb4e16bc8">CurrentScene</a>.transform;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        poolAble.transform.parent = parent;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        poolAble.IsUsing = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> poolAble;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">전역으로 게임 전체와 다른 Manager를 관리하는 Manager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_a77885fb8371a21ac5e9022a297058f29"><div class="ttname"><a href="class_game_manager.html#a77885fb8371a21ac5e9022a297058f29">GameManager.SceneMng</a></div><div class="ttdeci">static SceneManagerEx SceneMng</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00024">GameManager.cs:24</a></div></div>
 <div class="ttc" id="aclass_pool_able_html"><div class="ttname"><a href="class_pool_able.html">PoolAble</a></div><div class="ttdoc">Pooling 할 프리팹에 붙여 구분</div><div class="ttdef"><b>Definition:</b> <a href="_pool_able_8cs_source.html#l00008">PoolAble.cs:9</a></div></div>
 <div class="ttc" id="aclass_pool_html"><div class="ttname"><a href="class_pool.html">Pool</a></div><div class="ttdoc">Pooling한 GameObject들을 Stack으로 관리</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00009">Pool.cs:10</a></div></div>
 <div class="ttc" id="aclass_pool_html_a0f4732a8569e5c24ebaebd2a9ddb6ec9"><div class="ttname"><a href="class_pool.html#a0f4732a8569e5c24ebaebd2a9ddb6ec9">Pool.Original</a></div><div class="ttdeci">GameObject Original</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00013">Pool.cs:13</a></div></div>
@@ -164,7 +165,8 @@ $(document).ready(function(){initNavTree('_pool_8cs_source.html',''); initResiza
 <div class="ttc" id="aclass_pool_html_a945f4268e790751ad785ea409f148e6b"><div class="ttname"><a href="class_pool.html#a945f4268e790751ad785ea409f148e6b">Pool.Init</a></div><div class="ttdeci">void Init(GameObject original, int count=5)</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00016">Pool.cs:16</a></div></div>
 <div class="ttc" id="aclass_pool_html_a9d91c97d93a244c5c2a401c64d3553d9"><div class="ttname"><a href="class_pool.html#a9d91c97d93a244c5c2a401c64d3553d9">Pool.Root</a></div><div class="ttdeci">Transform Root</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00014">Pool.cs:14</a></div></div>
 <div class="ttc" id="aclass_pool_html_ab27bd35e14dcc2bb8a668d7675d00978"><div class="ttname"><a href="class_pool.html#ab27bd35e14dcc2bb8a668d7675d00978">Pool.Create</a></div><div class="ttdeci">PoolAble Create()</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00029">Pool.cs:29</a></div></div>
-<div class="ttc" id="aclass_pool_html_ad905937d335331af4f664966fb30d4a6"><div class="ttname"><a href="class_pool.html#ad905937d335331af4f664966fb30d4a6">Pool.Pop</a></div><div class="ttdeci">PoolAble Pop(Transform parent)</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00054">Pool.cs:54</a></div></div>
+<div class="ttc" id="aclass_pool_html_ad905937d335331af4f664966fb30d4a6"><div class="ttname"><a href="class_pool.html#ad905937d335331af4f664966fb30d4a6">Pool.Pop</a></div><div class="ttdeci">PoolAble Pop(Transform parent)</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00053">Pool.cs:53</a></div></div>
+<div class="ttc" id="aclass_scene_manager_ex_html_af7617a6051386311326b132cb4e16bc8"><div class="ttname"><a href="class_scene_manager_ex.html#af7617a6051386311326b132cb4e16bc8">SceneManagerEx.CurrentScene</a></div><div class="ttdeci">BaseScene CurrentScene</div><div class="ttdef"><b>Definition:</b> <a href="_scene_manager_ex_8cs_source.html#l00011">SceneManagerEx.cs:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

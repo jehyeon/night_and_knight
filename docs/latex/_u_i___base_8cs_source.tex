@@ -53,47 +53,35 @@
 \DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ objects[idx]\ as\ T;}
 \DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00050}00050\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00052}\mbox{\hyperlink{class_u_i___base_ab1ae6372673a56278bf761d700ae2b82}{00052}}\ \ \ \ \ \textcolor{keyword}{protected}\ GameObject\ \mbox{\hyperlink{class_u_i___base_ab1ae6372673a56278bf761d700ae2b82}{GetObject}}(\textcolor{keywordtype}{int}\ idx)}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00053}00053\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Get<GameObject>(idx);}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00055}00055\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00057}\mbox{\hyperlink{class_u_i___base_ab0bf1d664f30ab5333ac1807ed1f471b}{00057}}\ \ \ \ \ \textcolor{keyword}{protected}\ TextMeshProUGUI\ \mbox{\hyperlink{class_u_i___base_ab0bf1d664f30ab5333ac1807ed1f471b}{GetText}}(\textcolor{keywordtype}{int}\ idx)}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00058}00058\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Get<TextMeshProUGUI>(idx);}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00060}00060\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00062}\mbox{\hyperlink{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}{00062}}\ \ \ \ \ \textcolor{keyword}{protected}\ Button\ \mbox{\hyperlink{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}{GetButton}}(\textcolor{keywordtype}{int}\ idx)}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00063}00063\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Get<Button>(idx);}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00065}00065\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00066}00066\ }
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00067}\mbox{\hyperlink{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}{00067}}\ \ \ \ \ \textcolor{keyword}{protected}\ Image\ \mbox{\hyperlink{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}{GetImage}}(\textcolor{keywordtype}{int}\ idx)}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00068}00068\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Get<Image>(idx);}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00070}00070\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00071}00071\ }
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00072}00072\ \ \ \ \ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ *\ @details\ 액션에\ 액션을\ 더하는\ 것도\ 가능}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ *\ @param\ go에\ UI\_EventHandler를\ 붙여\ go가\ 이벤트\ 콜백을\ 받을\ 수\ 있도록\ 한다.}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ */}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00076}\mbox{\hyperlink{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}{00076}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}{BindEvent}}(GameObject\ go,\ Action<PointerEventData>\ action,}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}\ type\ =\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click)}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00078}00078\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___event_handler}{UI\_EventHandler}}\ evt\ =\ \mbox{\hyperlink{class_util}{Util}}.GetOrAddComponent<\mbox{\hyperlink{class_u_i___event_handler}{UI\_EventHandler}}>(go);}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00080}00080\ }
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click:}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnClickHandler\ -\/=\ action;}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnClickHandler\ +=\ action;}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Drag:}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnDragHandler\ -\/=\ action;}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnDragHandler\ +=\ action;}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00092}00092\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00052}\mbox{\hyperlink{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}{00052}}\ \ \ \ \ \textcolor{keyword}{protected}\ GameObject\ \mbox{\hyperlink{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}{GetGameObject}}(\textcolor{keywordtype}{int}\ idx)\ \{\ \textcolor{keywordflow}{return}\ Get<GameObject>(idx);\ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00054}\mbox{\hyperlink{class_u_i___base_a355079952b0fa734f33838f3fcc4c865}{00054}}\ \ \ \ \ \textcolor{keyword}{protected}\ TextMeshProUGUI\ \mbox{\hyperlink{class_u_i___base_a355079952b0fa734f33838f3fcc4c865}{GetTextMeshProUGUI}}(\textcolor{keywordtype}{int}\ idx)\ \{\ \textcolor{keywordflow}{return}\ Get<TextMeshProUGUI>(idx);\ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00056}\mbox{\hyperlink{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}{00056}}\ \ \ \ \ \textcolor{keyword}{protected}\ Button\ \mbox{\hyperlink{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}{GetButton}}(\textcolor{keywordtype}{int}\ idx)\ \{\ \textcolor{keywordflow}{return}\ Get<Button>(idx);\ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00058}\mbox{\hyperlink{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}{00058}}\ \ \ \ \ \textcolor{keyword}{protected}\ Image\ \mbox{\hyperlink{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}{GetImage}}(\textcolor{keywordtype}{int}\ idx)\ \{\ \textcolor{keywordflow}{return}\ Get<Image>(idx);\ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00060}00060\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ *\ @details\ 액션에\ 액션을\ 더하는\ 것도\ 가능}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ *\ @param\ go에\ UI\_EventHandler를\ 붙여\ go가\ 이벤트\ 콜백을\ 받을\ 수\ 있도록\ 한다.}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00064}\mbox{\hyperlink{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}{BindEvent}}(GameObject\ go,\ Action<PointerEventData>\ action,}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}\ type\ =\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click)}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___event_handler}{UI\_EventHandler}}\ evt\ =\ \mbox{\hyperlink{class_util}{Util}}.GetOrAddComponent<\mbox{\hyperlink{class_u_i___event_handler}{UI\_EventHandler}}>(go);}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click:}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnClickHandler\ -\/=\ action;}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnClickHandler\ +=\ action;}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Drag:}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnDragHandler\ -\/=\ action;}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnDragHandler\ +=\ action;}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___base_8cs_source_l00081}00081\ \}}
 
 \end{DoxyCode}

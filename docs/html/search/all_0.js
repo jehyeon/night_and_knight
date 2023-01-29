@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['bind_3c_20t_20_3e_0',['Bind&lt; T &gt;',['../class_u_i___base.html#a49099be0bcb4aad7349648a916a61a69',1,'UI_Base']]],
-  ['bindevent_1',['BindEvent',['../class_u_i___base.html#aafa6b32d552ccc7a4c98ccdf14a2c15d',1,'UI_Base.BindEvent()'],['../class_extension.html#a40b318e19e601c790c74f27bccc3277e',1,'Extension.BindEvent()']]],
-  ['buttons_2',['Buttons',['../class_test___popup.html#a2200c9a3564da59c1160338587ecb034',1,'Test_Popup']]]
+  ['awake_0',['Awake',['../class_base_scene.html#ae4b513cddd594f1c359e4f0a3e79a8c6',1,'BaseScene']]]
 ];

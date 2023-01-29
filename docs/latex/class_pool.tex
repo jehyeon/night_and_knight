@@ -96,35 +96,32 @@ Pooling한 Game\+Object들을 Stack으로 관리
 {\em m\+Pool\+Stack로부터} & 꺼내와서 parent를 부모 오브젝트로 설정 (오브젝트 활성화) \\
 \hline
 \end{DoxyParams}
-\begin{DoxyRefDesc}{할일}
-\item[\mbox{\hyperlink{todo__todo000001}{할일}}]Dont\+Destroy\+On\+Load 해제용 코드 구현 \end{DoxyRefDesc}
 
 
-\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00054}{54}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_pool_8cs_source}{Pool.\+cs}} 파일의 \mbox{\hyperlink{_pool_8cs_source_l00053}{53}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00055\ \ \ \ \ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_able}{PoolAble}}\ poolAble;}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Count\ >\ 0)}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Pop();}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}}();}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{true});}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (parent\ ==\ null)\ }}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ poolAble.transform.parent\ =\ GameManager.SceneMng.CurrentScene.transform;*/}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ parent;}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ poolAble.IsUsing\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ poolAble;}
-\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pool_able}{PoolAble}}\ poolAble;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Count\ >\ 0)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_a86a494509dc100f7324bf877de0fb4cc}{mPoolStack}}.Pop();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble\ =\ \mbox{\hyperlink{class_pool_ab27bd35e14dcc2bb8a668d7675d00978}{Create}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ poolAble.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parent\ ==\ \textcolor{keyword}{null})\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a77885fb8371a21ac5e9022a297058f29}{SceneMng}}.\mbox{\hyperlink{class_scene_manager_ex_af7617a6051386311326b132cb4e16bc8}{CurrentScene}}.transform;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ poolAble.transform.parent\ =\ parent;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ poolAble.IsUsing\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ poolAble;}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_pool_a2847330763b5c96efa475b4cb63ff9d4}\label{class_pool_a2847330763b5c96efa475b4cb63ff9d4}} 

@@ -1,14 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "bcdefgiklmopqrstu할",
-  1: "degimprstu",
-  2: "degimprstu",
-  3: "bcdfgilopstu",
+  0: "abcdefgiklmopqrstu",
+  1: "bdegimprstu",
+  2: "bdegimprstu",
+  3: "abcdfgilmopstu",
   4: "kmos",
-  5: "bcgimtu",
-  6: "cdimpqt",
-  7: "iopru",
-  8: "할"
+  5: "bcgimstu",
+  6: "cdgimpqtu",
+  7: "cioprsu"
 };
 
 var indexSectionNames =
@@ -20,8 +19,7 @@ var indexSectionNames =
   4: "variables",
   5: "enums",
   6: "enumvalues",
-  7: "properties",
-  8: "pages"
+  7: "properties"
 };
 
 var indexSectionLabels =
@@ -33,7 +31,6 @@ var indexSectionLabels =
   4: "변수",
   5: "열거형 타입",
   6: "열거형 멤버",
-  7: "속성",
-  8: "페이지들"
+  7: "속성"
 };
 

@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "night_and_knight", "index.html", [
-    [ "할일 목록", "todo.html", null ],
     [ "클래스", "annotated.html", [
       [ "클래스 목록", "annotated.html", "annotated_dup" ],
       [ "클래스 색인", "classes.html", null ],
@@ -49,7 +48,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_data_manager_8cs.html"
+"_base_scene_8cs.html",
+"class_u_i_manager.html#ad4c80654123d4b920de9b6135ce0f1b5"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

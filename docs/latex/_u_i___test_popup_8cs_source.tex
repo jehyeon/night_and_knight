@@ -1,0 +1,70 @@
+\hypertarget{_u_i___test_popup_8cs_source}{}\doxysection{UI\+\_\+\+Test\+Popup.\+cs}
+\label{_u_i___test_popup_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/PopupUI/UI\_TestPopup.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/PopupUI/UI\_TestPopup.cs}}
+\mbox{\hyperlink{_u_i___test_popup_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00008}00008\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00009}00009\ \textcolor{comment}{\ *\ @brief\ TEST\ CODE}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00010}00010\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00011}\mbox{\hyperlink{class_u_i___test_popup}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_i___test_popup}{UI\_TestPopup}}\ :\ \mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00013}\mbox{\hyperlink{class_u_i___test_popup_a2200c9a3564da59c1160338587ecb034}{00013}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_u_i___test_popup_a2200c9a3564da59c1160338587ecb034}{Buttons}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___test_popup_a2200c9a3564da59c1160338587ecb034ad18bfba046298bcb8cc0f52f7daccf82}{MoneyButton}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00018}\mbox{\hyperlink{class_u_i___test_popup_aa80bce1d0ea05213c0d6c327126caf31}{00018}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_u_i___test_popup_aa80bce1d0ea05213c0d6c327126caf31}{Texts}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___test_popup_aa80bce1d0ea05213c0d6c327126caf31af7db2c28553c439d6df2dc7389e306e5}{MoneyButtonText}},}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___test_popup_aa80bce1d0ea05213c0d6c327126caf31ae714afbc9bbc6449cbca12b091f52eef}{MoneyText}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00024}\mbox{\hyperlink{class_u_i___test_popup_a11b4fe9f4efc221e06a058a1b6650e3d}{00024}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_u_i___test_popup_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___test_popup_a11b4fe9f4efc221e06a058a1b6650e3da4e7ca2a6dd170270f44af41cd353a6d0}{TestObject}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00029}\mbox{\hyperlink{class_u_i___test_popup_a1ec2c691c74c34f0a87c8f3e1db6e501}{00029}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_u_i___test_popup_a1ec2c691c74c34f0a87c8f3e1db6e501}{Images}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___test_popup_a1ec2c691c74c34f0a87c8f3e1db6e501a753a0fab47004d115a96793a15890876}{ItemIcon}}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00034}\mbox{\hyperlink{class_u_i___test_popup_af73e100fde1318f57cf57570b459af6d}{00034}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_u_i___test_popup_af73e100fde1318f57cf57570b459af6d}{mMoney}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00035}00035\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00036}\mbox{\hyperlink{class_u_i___test_popup_a07aaf1227e4d645f15e0a964f54ef291}{00036}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___test_popup_a07aaf1227e4d645f15e0a964f54ef291}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___test_popup_a8045e088b31fe0754fb20cb0a5ff0dc9}{Init}}();}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00041}\mbox{\hyperlink{class_u_i___test_popup_a8045e088b31fe0754fb20cb0a5ff0dc9}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___test_popup_a8045e088b31fe0754fb20cb0a5ff0dc9}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ base.Init();}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ Bind<Button>(typeof(\mbox{\hyperlink{class_u_i___test_popup_a2200c9a3564da59c1160338587ecb034}{Buttons}}));}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ Bind<TextMeshProUGUI>(typeof(\mbox{\hyperlink{class_u_i___test_popup_aa80bce1d0ea05213c0d6c327126caf31}{Texts}}));}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ Bind<GameObject>(typeof(\mbox{\hyperlink{class_u_i___test_popup_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}));}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ Bind<Image>(typeof(\mbox{\hyperlink{class_u_i___test_popup_a1ec2c691c74c34f0a87c8f3e1db6e501}{Images}}));}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}{GetButton}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___test_popup_a2200c9a3564da59c1160338587ecb034}{Buttons}}.MoneyButton).gameObject.BindEvent(\mbox{\hyperlink{class_u_i___test_popup_a85049360b699f9def5ae06e08bede360}{OnButtonClicked}},\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click);}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}{GetImage}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___test_popup_a1ec2c691c74c34f0a87c8f3e1db6e501}{Images}}.ItemIcon).gameObject.BindEvent(\mbox{\hyperlink{class_u_i___test_popup_a39848b31768592fdd6d659f7332d5d25}{OnDrag}},\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Drag);}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00053}00053\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00054}\mbox{\hyperlink{class_u_i___test_popup_a85049360b699f9def5ae06e08bede360}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___test_popup_a85049360b699f9def5ae06e08bede360}{OnButtonClicked}}(PointerEventData\ data)}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00055}00055\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___test_popup_af73e100fde1318f57cf57570b459af6d}{mMoney}}++;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a355079952b0fa734f33838f3fcc4c865}{GetTextMeshProUGUI}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___test_popup_aa80bce1d0ea05213c0d6c327126caf31}{Texts}}.MoneyText).text\ =\ \$\textcolor{stringliteral}{"{}Money:\ \{mMoney\}!"{}};}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00060}\mbox{\hyperlink{class_u_i___test_popup_a39848b31768592fdd6d659f7332d5d25}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___test_popup_a39848b31768592fdd6d659f7332d5d25}{OnDrag}}(PointerEventData\ data)}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}{GetImage}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___test_popup_a1ec2c691c74c34f0a87c8f3e1db6e501}{Images}}.ItemIcon).transform.position\ =\ data.position;}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___test_popup_8cs_source_l00064}00064\ \}}
+
+\end{DoxyCode}

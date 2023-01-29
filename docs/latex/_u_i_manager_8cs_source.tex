@@ -20,7 +20,7 @@
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ root\ =\ GameObject.Find(\textcolor{stringliteral}{"{}@UI\_Root"{}});}
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (root\ ==\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ root\ =\ \textcolor{keyword}{new}\ GameObject\ \{\ name\ =\ \textcolor{stringliteral}{"{}@UI\_Root"{}}\ \};}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ Object.DontDestroyOnLoad(root);}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Object.DontDestroyOnLoad(root);}}
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ root;}
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
@@ -69,38 +69,51 @@
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ popupUI;}
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00081}00081\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00082}00082\ }
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00086}\mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{ClosePopupUI}}()}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00087}00087\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Count\ ==\ 0)}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00090}00090\ }
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popupUI=\ \mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Pop();}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a496f52583a8ea4b899679fe3254546ed}{ResourceMng}}.\mbox{\hyperlink{class_resource_manager_a3d8540720596e320425d0cfca291255b}{Destroy}}(popupUI.gameObject);}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ popupUI\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_manager_ad9548c3722176e3c7393150195ccda8e}{mOrder}}-\/-\/;}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00095}00095\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00096}00096\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00100}\mbox{\hyperlink{class_u_i_manager_a539e380cd5f5c9413a9de08c982ff960}{00100}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_manager_a539e380cd5f5c9413a9de08c982ff960}{ClosePopupUI}}(\mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popup)}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00101}00101\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Count\ ==\ 0)}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00104}00104\ }
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Peek()\ !=\ popup)}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Close\ Popup\ Failed"{}});}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{ClosePopupUI}}();}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00112}00112\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00113}00113\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00117}\mbox{\hyperlink{class_u_i_manager_a9c45b1ca55f9749a0875024b8cda2044}{00117}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_manager_a9c45b1ca55f9749a0875024b8cda2044}{CloseAllPopupUI}}()}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00118}00118\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Count\ >\ 0)}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{ClosePopupUI}}();}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00083}\mbox{\hyperlink{class_u_i_manager_ae64d298bb7cfdd634b47b076f80dd2a8}{00083}}\ \ \ \ \ \textcolor{keyword}{public}\ T\ \mbox{\hyperlink{class_u_i_manager_ae64d298bb7cfdd634b47b076f80dd2a8}{MakeSubItem<T>}}(Transform\ parent\ =\ \textcolor{keyword}{null},\ \textcolor{keywordtype}{string}\ name\ =\ \textcolor{keyword}{null})\ where\ T\ :\ \mbox{\hyperlink{class_u_i___base}{UI\_Base}}}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(name))}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ name\ =\ typeof(T).Name;}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ GameObject\ go\ =\ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a496f52583a8ea4b899679fe3254546ed}{ResourceMng}}.\mbox{\hyperlink{class_resource_manager_a04b388e19bffc92646a7c885976a9bbd}{Instantiate}}(\$\textcolor{stringliteral}{"{}UI/SubItemUI/\{name\}"{}});}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parent\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ go.transform.SetParent(parent);}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ go.GetOrAddComponent<T>();}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00095}00095\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00099}\mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{00099}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{ClosePopupUI}}()}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Count\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popupUI=\ \mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Pop();}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager}{GameManager}}.\mbox{\hyperlink{class_game_manager_a496f52583a8ea4b899679fe3254546ed}{ResourceMng}}.\mbox{\hyperlink{class_resource_manager_a3d8540720596e320425d0cfca291255b}{Destroy}}(popupUI.gameObject);}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ popupUI\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_manager_ad9548c3722176e3c7393150195ccda8e}{mOrder}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00109}00109\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00113}\mbox{\hyperlink{class_u_i_manager_a539e380cd5f5c9413a9de08c982ff960}{00113}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_manager_a539e380cd5f5c9413a9de08c982ff960}{ClosePopupUI}}(\mbox{\hyperlink{class_u_i___popup}{UI\_Popup}}\ popup)}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00114}00114\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Count\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Peek()\ !=\ popup)}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Close\ Popup\ Failed"{}});}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00123}00123\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00124}00124\ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{ClosePopupUI}}();}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00126}00126\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00130}\mbox{\hyperlink{class_u_i_manager_a9c45b1ca55f9749a0875024b8cda2044}{00130}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_manager_a9c45b1ca55f9749a0875024b8cda2044}{CloseAllPopupUI}}()}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00131}00131\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_u_i_manager_a1383fcc65dbf2f647d79707e0dbbc3ed}{mPopupStack}}.Count\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_manager_a4416f9eb9f7d5966110fbef4b5bd5a63}{ClosePopupUI}}();}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i_manager_8cs_source_l00137}00137\ \}}
 
 \end{DoxyCode}

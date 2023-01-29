@@ -1,0 +1,353 @@
+\hypertarget{class_u_i___inven___item}{}\doxysection{UI\+\_\+\+Inven\+\_\+\+Item 클래스 참조}
+\label{class_u_i___inven___item}\index{UI\_Inven\_Item@{UI\_Inven\_Item}}
+UI\+\_\+\+Inven\+\_\+\+Item에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_i___inven___item}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_u_i___inven___item_a8045e088b31fe0754fb20cb0a5ff0dc9}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_u_i___inven___item_a198d3d75626bae89a926e01722a75f53}{Set\+Info}} (string item\+Name)
+\item 
+void \mbox{\hyperlink{class_u_i___inven___item_a85049360b699f9def5ae06e08bede360}{On\+Button\+Clicked}} (Pointer\+Event\+Data data)
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}{Bind\+Event}} (Game\+Object go, Action$<$ Pointer\+Event\+Data $>$ action, \mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{Define.\+UIEvent}} type=\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6a316853cc3718335f11c048e33b9be98a}{Define.\+UIEvent.\+Click}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i___base_a49099be0bcb4aad7349648a916a61a69}{Bind$<$ T $>$}} (Type type)
+\item 
+T \mbox{\hyperlink{class_u_i___base_a293b3cca54ae15b7488909f8ba1b5fee}{Get$<$ T $>$}} (int idx)
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}{Get\+Game\+Object}} (int idx)
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i___base_a355079952b0fa734f33838f3fcc4c865}{Get\+Text\+Mesh\+Pro\+UGUI}} (int idx)
+\item 
+Button \mbox{\hyperlink{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}{Get\+Button}} (int idx)
+\item 
+Image \mbox{\hyperlink{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}{Get\+Image}} (int idx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ Type, Unity\+Engine.\+Object\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_u_i___base_ab1690a24229219f92af044fe8d89aa88}{m\+Object\+Dic}} = new Dictionary$<$Type, Unity\+Engine.\+Object\mbox{[}$\,$\mbox{]}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{Game\+Objects}} \{ \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da753a0fab47004d115a96793a15890876}{Item\+Icon}}
+, \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da75b3442ca70da742d338c1c91e216317}{Item\+Name\+Text}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i___inven___item_a07aaf1227e4d645f15e0a964f54ef291}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}{m\+Item\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+
+
+\mbox{\hyperlink{_u_i___inven___item_8cs_source}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}} 파일의 \mbox{\hyperlink{_u_i___inven___item_8cs_source_l00008}{8}} 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 열거형 문서화}
+\mbox{\Hypertarget{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}\label{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!GameObjects@{GameObjects}}
+\index{GameObjects@{GameObjects}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{GameObjects}{GameObjects}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{Game\+Objects}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ItemIcon@{ItemIcon}!UI\_Inven\_Item@{UI\_Inven\_Item}}\index{UI\_Inven\_Item@{UI\_Inven\_Item}!ItemIcon@{ItemIcon}}}\mbox{\Hypertarget{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da753a0fab47004d115a96793a15890876}\label{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da753a0fab47004d115a96793a15890876}} 
+Item\+Icon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ItemNameText@{ItemNameText}!UI\_Inven\_Item@{UI\_Inven\_Item}}\index{UI\_Inven\_Item@{UI\_Inven\_Item}!ItemNameText@{ItemNameText}}}\mbox{\Hypertarget{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da75b3442ca70da742d338c1c91e216317}\label{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da75b3442ca70da742d338c1c91e216317}} 
+Item\+Name\+Text&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\mbox{\hyperlink{_u_i___inven___item_8cs_source}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}} 파일의 \mbox{\hyperlink{_u_i___inven___item_8cs_source_l00011}{11}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da753a0fab47004d115a96793a15890876}{ItemIcon}},}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da75b3442ca70da742d338c1c91e216317}{ItemNameText}}}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_u_i___base_a49099be0bcb4aad7349648a916a61a69}\label{class_u_i___base_a49099be0bcb4aad7349648a916a61a69}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!Bind$<$ T $>$@{Bind$<$ T $>$}}
+\index{Bind$<$ T $>$@{Bind$<$ T $>$}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{Bind$<$ T $>$()}{Bind< T >()}}
+{\footnotesize\ttfamily void Bind$<$ T $>$ (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\begin{Desc}
+\item[타입 한정자들]\begin{description}
+\item[{\em T} : {\em Unity\+Engine.\+Object}]\end{description}
+\end{Desc}
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00021}{21}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ UnityEngine.Object}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ uiNames\ =\ Enum.GetNames(type);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ UnityEngine.Object[]\ objects\ =\ \textcolor{keyword}{new}\ UnityEngine.Object[uiNames.Length];}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_ab1690a24229219f92af044fe8d89aa88}{mObjectDic}}.Add(typeof(T),\ objects);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ uiNames.Length;\ i++)}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (typeof(T)\ ==\ typeof(GameObject))}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ objects[i]\ =\ \mbox{\hyperlink{class_util}{Util}}.\mbox{\hyperlink{class_util_a7d029f1f523fabef49f2be1d73807582}{FindChild}}(gameObject,\ uiNames[i],\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ objects[i]\ =\ \mbox{\hyperlink{class_util}{Util}}.\mbox{\hyperlink{class_util_a7d029f1f523fabef49f2be1d73807582}{FindChild}}<T>(gameObject,\ uiNames[i],\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (objects[i]\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log((\$\textcolor{stringliteral}{"{}Failed\ to\ bind(\{uiNames[i]\})"{}}));}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}\label{class_u_i___base_aafa6b32d552ccc7a4c98ccdf14a2c15d}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!BindEvent@{BindEvent}}
+\index{BindEvent@{BindEvent}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{BindEvent()}{BindEvent()}}
+{\footnotesize\ttfamily static void Bind\+Event (\begin{DoxyParamCaption}\item[{Game\+Object}]{go,  }\item[{Action$<$ Pointer\+Event\+Data $>$}]{action,  }\item[{\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{Define\+::\+UIEvent}}}]{type = {\ttfamily \mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6a316853cc3718335f11c048e33b9be98a}{Define\+::\+UIEvent\+::\+Click}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00064}{64}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___event_handler}{UI\_EventHandler}}\ evt\ =\ \mbox{\hyperlink{class_util}{Util}}.GetOrAddComponent<\mbox{\hyperlink{class_u_i___event_handler}{UI\_EventHandler}}>(go);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (type)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnClickHandler\ -\/=\ action;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnClickHandler\ +=\ action;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Drag:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnDragHandler\ -\/=\ action;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ evt.OnDragHandler\ +=\ action;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___base_a293b3cca54ae15b7488909f8ba1b5fee}\label{class_u_i___base_a293b3cca54ae15b7488909f8ba1b5fee}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}}
+{\footnotesize\ttfamily T Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\begin{Desc}
+\item[타입 한정자들]\begin{description}
+\item[{\em T} : {\em Unity\+Engine.\+Object}]\end{description}
+\end{Desc}
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00043}{43}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ UnityEngine.Object}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ UnityEngine.Object[]\ objects;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i___base_ab1690a24229219f92af044fe8d89aa88}{mObjectDic}}.TryGetValue(typeof(T),\ out\ objects)\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ objects[idx]\ as\ T;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}\label{class_u_i___base_a020946bab466c5c0ead9a2dab5a42b7b}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!GetButton@{GetButton}}
+\index{GetButton@{GetButton}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{GetButton()}{GetButton()}}
+{\footnotesize\ttfamily Button Get\+Button (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00056}{56}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \{\ \textcolor{keywordflow}{return}\ Get<Button>(idx);\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}\label{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!GetGameObject@{GetGameObject}}
+\index{GetGameObject@{GetGameObject}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{GetGameObject()}{GetGameObject()}}
+{\footnotesize\ttfamily Game\+Object Get\+Game\+Object (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00052}{52}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \{\ \textcolor{keywordflow}{return}\ Get<GameObject>(idx);\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}\label{class_u_i___base_a4503b80a59127313ba02caeed6fe7d3d}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!GetImage@{GetImage}}
+\index{GetImage@{GetImage}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{GetImage()}{GetImage()}}
+{\footnotesize\ttfamily Image Get\+Image (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00058}{58}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{\ \textcolor{keywordflow}{return}\ Get<Image>(idx);\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___base_a355079952b0fa734f33838f3fcc4c865}\label{class_u_i___base_a355079952b0fa734f33838f3fcc4c865}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!GetTextMeshProUGUI@{GetTextMeshProUGUI}}
+\index{GetTextMeshProUGUI@{GetTextMeshProUGUI}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{GetTextMeshProUGUI()}{GetTextMeshProUGUI()}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI Get\+Text\+Mesh\+Pro\+UGUI (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00054}{54}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{\ \textcolor{keywordflow}{return}\ Get<TextMeshProUGUI>(idx);\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___inven___item_a8045e088b31fe0754fb20cb0a5ff0dc9}\label{class_u_i___inven___item_a8045e088b31fe0754fb20cb0a5ff0dc9}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!Init@{Init}}
+\index{Init@{Init}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily override void Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_u_i___base_a0866ba0f224544c505bb9576cb98243b}{UI\+\_\+\+Base}}를 구현.
+
+
+
+\mbox{\hyperlink{_u_i___inven___item_8cs_source}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}} 파일의 \mbox{\hyperlink{_u_i___inven___item_8cs_source_l00024}{24}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Bind<GameObject>(typeof(\mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}));}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}{GetGameObject}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}.ItemNameText).GetComponent<TextMeshProUGUI>().text\ =\ \mbox{\hyperlink{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}{mItemName}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}{GetGameObject}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}.ItemIcon).gameObject.BindEvent(\mbox{\hyperlink{class_u_i___inven___item_a85049360b699f9def5ae06e08bede360}{OnButtonClicked}},\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click);}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___inven___item_a85049360b699f9def5ae06e08bede360}\label{class_u_i___inven___item_a85049360b699f9def5ae06e08bede360}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!OnButtonClicked@{OnButtonClicked}}
+\index{OnButtonClicked@{OnButtonClicked}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{OnButtonClicked()}{OnButtonClicked()}}
+{\footnotesize\ttfamily void On\+Button\+Clicked (\begin{DoxyParamCaption}\item[{Pointer\+Event\+Data}]{data }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_u_i___inven___item_8cs_source}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}} 파일의 \mbox{\hyperlink{_u_i___inven___item_8cs_source_l00037}{37}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}\{mItemName\}\ Click!"{}});}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___inven___item_a198d3d75626bae89a926e01722a75f53}\label{class_u_i___inven___item_a198d3d75626bae89a926e01722a75f53}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!SetInfo@{SetInfo}}
+\index{SetInfo@{SetInfo}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{SetInfo()}{SetInfo()}}
+{\footnotesize\ttfamily void Set\+Info (\begin{DoxyParamCaption}\item[{string}]{item\+Name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_u_i___inven___item_8cs_source}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}} 파일의 \mbox{\hyperlink{_u_i___inven___item_8cs_source_l00032}{32}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}{mItemName}}\ =\ itemName;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i___inven___item_a07aaf1227e4d645f15e0a964f54ef291}\label{class_u_i___inven___item_a07aaf1227e4d645f15e0a964f54ef291}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!Start@{Start}}
+\index{Start@{Start}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_u_i___inven___item_8cs_source}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}} 파일의 \mbox{\hyperlink{_u_i___inven___item_8cs_source_l00019}{19}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a8045e088b31fe0754fb20cb0a5ff0dc9}{Init}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}\label{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!mItemName@{mItemName}}
+\index{mItemName@{mItemName}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{mItemName}{mItemName}}
+{\footnotesize\ttfamily string m\+Item\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{_u_i___inven___item_8cs_source}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}} 파일의 \mbox{\hyperlink{_u_i___inven___item_8cs_source_l00017}{17}} 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_u_i___base_ab1690a24229219f92af044fe8d89aa88}\label{class_u_i___base_ab1690a24229219f92af044fe8d89aa88}} 
+\index{UI\_Inven\_Item@{UI\_Inven\_Item}!mObjectDic@{mObjectDic}}
+\index{mObjectDic@{mObjectDic}!UI\_Inven\_Item@{UI\_Inven\_Item}}
+\doxysubsubsection{\texorpdfstring{mObjectDic}{mObjectDic}}
+{\footnotesize\ttfamily Dictionary$<$Type, Unity\+Engine.\+Object\mbox{[}$\,$\mbox{]}$>$ m\+Object\+Dic = new Dictionary$<$Type, Unity\+Engine.\+Object\mbox{[}$\,$\mbox{]}$>$()\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{_u_i___base_8cs_source}{UI\+\_\+\+Base.\+cs}} 파일의 \mbox{\hyperlink{_u_i___base_8cs_source_l00014}{14}} 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ddino/\+Documents/\+Work\+Space/\+Unity\+Projects/alpha-\/project/night\+\_\+and\+\_\+knight/\+Assets/\+C\#/\+UI/\+Sub\+Item\+UI/\mbox{\hyperlink{_u_i___inven___item_8cs}{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}}\end{DoxyCompactItemize}

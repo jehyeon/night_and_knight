@@ -106,7 +106,7 @@ UI_Popup에 대한 상속 다이어그램 : </div>
   <img src="class_u_i___popup.png" usemap="#UI_5FPopup_map" alt=""/>
   <map id="UI_5FPopup_map" name="UI_5FPopup_map">
 <area href="class_u_i___base.html" alt="UI_Base" shape="rect" coords="0,56,102,80"/>
-<area href="class_test___popup.html" alt="Test_Popup" shape="rect" coords="0,168,102,192"/>
+<area href="class_u_i___test_popup.html" alt="UI_TestPopup" shape="rect" coords="0,168,102,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -129,10 +129,10 @@ Protected 멤버 함수</h2></td></tr>
 <tr class="separator:a49099be0bcb4aad7349648a916a61a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a293b3cca54ae15b7488909f8ba1b5fee"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#a293b3cca54ae15b7488909f8ba1b5fee">Get&lt; T &gt;</a> (int idx)</td></tr>
 <tr class="separator:a293b3cca54ae15b7488909f8ba1b5fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1ae6372673a56278bf761d700ae2b82"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#ab1ae6372673a56278bf761d700ae2b82">GetObject</a> (int idx)</td></tr>
-<tr class="separator:ab1ae6372673a56278bf761d700ae2b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0bf1d664f30ab5333ac1807ed1f471b"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#ab0bf1d664f30ab5333ac1807ed1f471b">GetText</a> (int idx)</td></tr>
-<tr class="separator:ab0bf1d664f30ab5333ac1807ed1f471b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c79fe91c36738677d41b16feebd2f3"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#a12c79fe91c36738677d41b16feebd2f3">GetGameObject</a> (int idx)</td></tr>
+<tr class="separator:a12c79fe91c36738677d41b16feebd2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355079952b0fa734f33838f3fcc4c865"><td class="memItemLeft" align="right" valign="top">TextMeshProUGUI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#a355079952b0fa734f33838f3fcc4c865">GetTextMeshProUGUI</a> (int idx)</td></tr>
+<tr class="separator:a355079952b0fa734f33838f3fcc4c865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a020946bab466c5c0ead9a2dab5a42b7b"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#a020946bab466c5c0ead9a2dab5a42b7b">GetButton</a> (int idx)</td></tr>
 <tr class="separator:a020946bab466c5c0ead9a2dab5a42b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4503b80a59127313ba02caeed6fe7d3d"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i___base.html#a4503b80a59127313ba02caeed6fe7d3d">GetImage</a> (int idx)</td></tr>
@@ -243,24 +243,24 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>    {</div>
-<div class="line"><span class="lineno">   79</span>        <a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a> evt = <a class="code hl_class" href="class_util.html">Util</a>.GetOrAddComponent&lt;<a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a>&gt;(go);</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">switch</span> (type)</div>
-<div class="line"><span class="lineno">   82</span>        {</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Click:</div>
-<div class="line"><span class="lineno">   84</span>                evt.OnClickHandler -= action;</div>
-<div class="line"><span class="lineno">   85</span>                evt.OnClickHandler += action;</div>
-<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   87</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Drag:</div>
-<div class="line"><span class="lineno">   88</span>                evt.OnDragHandler -= action;</div>
-<div class="line"><span class="lineno">   89</span>                evt.OnDragHandler += action;</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>        <a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a> evt = <a class="code hl_class" href="class_util.html">Util</a>.GetOrAddComponent&lt;<a class="code hl_class" href="class_u_i___event_handler.html">UI_EventHandler</a>&gt;(go);</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno">   70</span>        {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Click:</div>
+<div class="line"><span class="lineno">   72</span>                evt.OnClickHandler -= action;</div>
+<div class="line"><span class="lineno">   73</span>                evt.OnClickHandler += action;</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">case</span> <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">UIEvent</a>.Drag:</div>
+<div class="line"><span class="lineno">   76</span>                evt.OnDragHandler -= action;</div>
+<div class="line"><span class="lineno">   77</span>                evt.OnDragHandler += action;</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
 <div class="ttc" id="aclass_define_html"><div class="ttname"><a href="class_define.html">Define</a></div><div class="ttdoc">enum 정의</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00004">Define.cs:5</a></div></div>
-<div class="ttc" id="aclass_define_html_a42845c46592624ff0de829dd2ee92ee6"><div class="ttname"><a href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">Define.UIEvent</a></div><div class="ttdeci">UIEvent</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00006">Define.cs:7</a></div></div>
+<div class="ttc" id="aclass_define_html_a42845c46592624ff0de829dd2ee92ee6"><div class="ttname"><a href="class_define.html#a42845c46592624ff0de829dd2ee92ee6">Define.UIEvent</a></div><div class="ttdeci">UIEvent</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00007">Define.cs:8</a></div></div>
 <div class="ttc" id="aclass_u_i___event_handler_html"><div class="ttname"><a href="class_u_i___event_handler.html">UI_EventHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="_u_i___event_handler_8cs_source.html#l00010">UI_EventHandler.cs:11</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -294,9 +294,9 @@ Protected 속성</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   16</span>    {</div>
 <div class="line"><span class="lineno">   17</span>        <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#abc4ef6be32ba1c96f8e2b3b89dfba67d">UIMng</a>.<a class="code hl_function" href="class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63">ClosePopupUI</a>(<span class="keyword">this</span>);</div>
 <div class="line"><span class="lineno">   18</span>    }</div>
-<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">전역으로 게임 전체와 다른 Manager를 관리하는 Manager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00010">GameManager.cs:11</a></div></div>
+<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">전역으로 게임 전체와 다른 Manager를 관리하는 Manager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
 <div class="ttc" id="aclass_game_manager_html_abc4ef6be32ba1c96f8e2b3b89dfba67d"><div class="ttname"><a href="class_game_manager.html#abc4ef6be32ba1c96f8e2b3b89dfba67d">GameManager.UIMng</a></div><div class="ttdeci">static UIManager UIMng</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00023">GameManager.cs:23</a></div></div>
-<div class="ttc" id="aclass_u_i_manager_html_a4416f9eb9f7d5966110fbef4b5bd5a63"><div class="ttname"><a href="class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63">UIManager.ClosePopupUI</a></div><div class="ttdeci">void ClosePopupUI()</div><div class="ttdoc">가장 Order가 높은 PopupUI 제거</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00086">UIManager.cs:86</a></div></div>
+<div class="ttc" id="aclass_u_i_manager_html_a4416f9eb9f7d5966110fbef4b5bd5a63"><div class="ttname"><a href="class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63">UIManager.ClosePopupUI</a></div><div class="ttdeci">void ClosePopupUI()</div><div class="ttdoc">가장 Order가 높은 PopupUI 제거</div><div class="ttdef"><b>Definition:</b> <a href="_u_i_manager_8cs_source.html#l00099">UIManager.cs:99</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -368,10 +368,37 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> Get&lt;Button&gt;(idx);</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{ <span class="keywordflow">return</span> Get&lt;Button&gt;(idx); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a12c79fe91c36738677d41b16feebd2f3" name="a12c79fe91c36738677d41b16feebd2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c79fe91c36738677d41b16feebd2f3">&#9670;&#160;</a></span>GetGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject GetGameObject </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{ <span class="keywordflow">return</span> Get&lt;GameObject&gt;(idx); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -399,15 +426,13 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>    {</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> Get&lt;Image&gt;(idx);</div>
-<div class="line"><span class="lineno">   70</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{ <span class="keywordflow">return</span> Get&lt;Image&gt;(idx); }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ab1ae6372673a56278bf761d700ae2b82" name="ab1ae6372673a56278bf761d700ae2b82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1ae6372673a56278bf761d700ae2b82">&#9670;&#160;</a></span>GetObject()</h2>
+<a id="a355079952b0fa734f33838f3fcc4c865" name="a355079952b0fa734f33838f3fcc4c865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a355079952b0fa734f33838f3fcc4c865">&#9670;&#160;</a></span>GetTextMeshProUGUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -416,7 +441,7 @@ Protected 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GameObject GetObject </td>
+          <td class="memname">TextMeshProUGUI GetTextMeshProUGUI </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>idx</em></td><td>)</td>
@@ -430,41 +455,8 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    {</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span> Get&lt;GameObject&gt;(idx);</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ab0bf1d664f30ab5333ac1807ed1f471b" name="ab0bf1d664f30ab5333ac1807ed1f471b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0bf1d664f30ab5333ac1807ed1f471b">&#9670;&#160;</a></span>GetText()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextMeshProUGUI GetText </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>idx</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> Get&lt;TextMeshProUGUI&gt;(idx);</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
+<p class="definition"><a class="el" href="_u_i___base_8cs_source.html">UI_Base.cs</a> 파일의 <a class="el" href="_u_i___base_8cs_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>{ <span class="keywordflow">return</span> Get&lt;TextMeshProUGUI&gt;(idx); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -492,6 +484,8 @@ Protected 속성</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="class_u_i___base.html#a0866ba0f224544c505bb9576cb98243b">UI_Base</a>를 구현.</p>
+
+<p><a class="el" href="class_u_i___test_popup.html#a8045e088b31fe0754fb20cb0a5ff0dc9">UI_TestPopup</a>에서 재구현되었습니다.</p>
 
 <p class="definition"><a class="el" href="_u_i___popup_8cs_source.html">UI_Popup.cs</a> 파일의 <a class="el" href="_u_i___popup_8cs_source.html#l00007">7</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>    {</div>

@@ -1,18 +1,12 @@
 var searchData=
 [
-  ['ui_5fbase_0',['UI_Base',['../class_u_i___base.html',1,'']]],
-  ['ui_5fbase_2ecs_1',['UI_Base.cs',['../_u_i___base_8cs.html',1,'']]],
-  ['ui_5feventhandler_2',['UI_EventHandler',['../class_u_i___event_handler.html',1,'']]],
-  ['ui_5feventhandler_2ecs_3',['UI_EventHandler.cs',['../_u_i___event_handler_8cs.html',1,'']]],
-  ['ui_5fpopup_4',['UI_Popup',['../class_u_i___popup.html',1,'']]],
-  ['ui_5fpopup_2ecs_5',['UI_Popup.cs',['../_u_i___popup_8cs.html',1,'']]],
-  ['ui_5fscene_6',['UI_Scene',['../class_u_i___scene.html',1,'']]],
-  ['ui_5fscene_2ecs_7',['UI_Scene.cs',['../_u_i___scene_8cs.html',1,'']]],
-  ['uievent_8',['UIEvent',['../class_define.html#a42845c46592624ff0de829dd2ee92ee6',1,'Define']]],
-  ['uimanager_9',['UIManager',['../class_u_i_manager.html',1,'']]],
-  ['uimanager_2ecs_10',['UIManager.cs',['../_u_i_manager_8cs.html',1,'']]],
-  ['uimng_11',['UIMng',['../class_game_manager.html#abc4ef6be32ba1c96f8e2b3b89dfba67d',1,'GameManager']]],
-  ['update_12',['Update',['../class_data_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'DataManager.Update()'],['../class_game_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'GameManager.Update()'],['../class_map_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'MapManager.Update()'],['../class_scene_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'SceneManager.Update()'],['../class_sound_manager.html#aec0783b5a136e042adcc47bae4fe5291',1,'SoundManager.Update()']]],
-  ['util_13',['Util',['../class_util.html',1,'']]],
-  ['util_2ecs_14',['Util.cs',['../_util_8cs.html',1,'']]]
+  ['test_0',['Test',['../class_test.html',1,'']]],
+  ['test_2ecs_1',['Test.cs',['../_test_8cs.html',1,'']]],
+  ['testcube_2',['TestCube',['../class_test.html#a1863818c2be60a4cd0040a754092012e',1,'Test']]],
+  ['testobject_3',['TestObject',['../class_u_i___test_popup.html#a11b4fe9f4efc221e06a058a1b6650e3da4e7ca2a6dd170270f44af41cd353a6d0',1,'UI_TestPopup']]],
+  ['testpopupui_4',['TestPopupUI',['../class_test.html#a086ba20cef8acc0e2c7e5c13d135595c',1,'Test']]],
+  ['testsceneui_5',['TestSceneUI',['../class_test.html#aa7c149426e6e65fc000a7aaf48865b1d',1,'Test']]],
+  ['texts_6',['Texts',['../class_u_i___test_popup.html#aa80bce1d0ea05213c0d6c327126caf31',1,'UI_TestPopup']]],
+  ['titlescene_7',['TitleScene',['../class_title_scene.html',1,'TitleScene'],['../class_define.html#acf721625ddb3197a5be044f6d5600600a6956c85a8b3592a1a55089fc29009672',1,'Define.TitleScene()']]],
+  ['titlescene_2ecs_8',['TitleScene.cs',['../_title_scene_8cs.html',1,'']]]
 ];

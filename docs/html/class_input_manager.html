@@ -93,29 +93,37 @@ $(document).ready(function(){initNavTree('class_input_manager.html',''); initRes
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
 <a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
 <a href="class_input_manager-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle"><div class="title">InputManager 클래스 참조</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>사용자 마우스, 키보드 입력을 받는 Manager  
+<p>사용자의 키보드, 마우스 입력을 받는 Manager  
  <a href="class_input_manager.html#details">더 자세히 ...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a77491714662f827ac632c2eee20f8963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a77491714662f827ac632c2eee20f8963">OnUpdate</a> ()</td></tr>
-<tr class="memdesc:a77491714662f827ac632c2eee20f8963"><td class="mdescLeft">&#160;</td><td class="mdescRight">실행입력이 없다면 바로 리턴, 입력이 있다면 KeyAction을 Invoke  <br /></td></tr>
+<tr class="memdesc:a77491714662f827ac632c2eee20f8963"><td class="mdescLeft">&#160;</td><td class="mdescRight">입력이 없다면 바로 리턴, 입력이 있다면 KeyAction/MouseAction을 Invoke  <br /></td></tr>
 <tr class="separator:a77491714662f827ac632c2eee20f8963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 속성</h2></td></tr>
 <tr class="memitem:ab536f97133ddd5fedcce45348295d8f8"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8">KeyAction</a> = null</td></tr>
 <tr class="separator:ab536f97133ddd5fedcce45348295d8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04bec8af26fb4714c83d1d78ab22791"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="class_define.html#a5f278706f235727f39ae168af63b1d99">Define.MouseEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#ab04bec8af26fb4714c83d1d78ab22791">MouseAction</a> = null</td></tr>
+<tr class="separator:ab04bec8af26fb4714c83d1d78ab22791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 속성</h2></td></tr>
+<tr class="memitem:a7feeca4455162e90fd6c8a7fb8aaa82b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_manager.html#a7feeca4455162e90fd6c8a7fb8aaa82b">mPressed</a> = false</td></tr>
+<tr class="separator:a7feeca4455162e90fd6c8a7fb8aaa82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p>사용자 마우스, 키보드 입력을 받는 Manager </p>
+<div class="textblock"><p>사용자의 키보드, 마우스 입력을 받는 Manager </p>
 
-<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00009">9</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a77491714662f827ac632c2eee20f8963" name="a77491714662f827ac632c2eee20f8963"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77491714662f827ac632c2eee20f8963">&#9670;&#160;</a></span>OnUpdate()</h2>
@@ -132,18 +140,37 @@ Public 속성</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>실행입력이 없다면 바로 리턴, 입력이 있다면 KeyAction을 Invoke </p>
+<p>입력이 없다면 바로 리턴, 입력이 있다면 KeyAction/MouseAction을 Invoke </p>
 <p>매 프레임마다 실행 </p>
 
-<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (Input.anyKey == <span class="keyword">false</span>)</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   21</span>        </div>
-<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8">KeyAction</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   23</span>            <a class="code hl_variable" href="class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8">KeyAction</a>.Invoke();</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="ttc" id="aclass_input_manager_html_ab536f97133ddd5fedcce45348295d8f8"><div class="ttname"><a href="class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8">InputManager.KeyAction</a></div><div class="ttdeci">Action KeyAction</div><div class="ttdef"><b>Definition:</b> <a href="_input_manager_8cs_source.html#l00011">InputManager.cs:11</a></div></div>
+<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        <span class="keywordflow">if</span> (EventSystem.current.IsPointerOverGameObject())</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   25</span>        </div>
+<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8">KeyAction</a> != <span class="keyword">null</span> &amp;&amp; Input.anyKey)</div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_variable" href="class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8">KeyAction</a>.Invoke();</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_input_manager.html#ab04bec8af26fb4714c83d1d78ab22791">MouseAction</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">if</span> (Input.GetMouseButton(0))</div>
+<div class="line"><span class="lineno">   32</span>            {</div>
+<div class="line"><span class="lineno">   33</span>                <a class="code hl_variable" href="class_input_manager.html#ab04bec8af26fb4714c83d1d78ab22791">MouseAction</a>.Invoke(<a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a5f278706f235727f39ae168af63b1d99">MouseEvent</a>.Press);</div>
+<div class="line"><span class="lineno">   34</span>                <a class="code hl_variable" href="class_input_manager.html#a7feeca4455162e90fd6c8a7fb8aaa82b">mPressed</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   37</span>            {</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_input_manager.html#a7feeca4455162e90fd6c8a7fb8aaa82b">mPressed</a>)</div>
+<div class="line"><span class="lineno">   39</span>                    <a class="code hl_variable" href="class_input_manager.html#ab04bec8af26fb4714c83d1d78ab22791">MouseAction</a>.Invoke(<a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a5f278706f235727f39ae168af63b1d99">MouseEvent</a>.Click);</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_variable" href="class_input_manager.html#a7feeca4455162e90fd6c8a7fb8aaa82b">mPressed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="ttc" id="aclass_define_html"><div class="ttname"><a href="class_define.html">Define</a></div><div class="ttdoc">enum 정의</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00004">Define.cs:5</a></div></div>
+<div class="ttc" id="aclass_define_html_a5f278706f235727f39ae168af63b1d99"><div class="ttname"><a href="class_define.html#a5f278706f235727f39ae168af63b1d99">Define.MouseEvent</a></div><div class="ttdeci">MouseEvent</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00013">Define.cs:14</a></div></div>
+<div class="ttc" id="aclass_input_manager_html_a7feeca4455162e90fd6c8a7fb8aaa82b"><div class="ttname"><a href="class_input_manager.html#a7feeca4455162e90fd6c8a7fb8aaa82b">InputManager.mPressed</a></div><div class="ttdeci">bool mPressed</div><div class="ttdef"><b>Definition:</b> <a href="_input_manager_8cs_source.html#l00015">InputManager.cs:15</a></div></div>
+<div class="ttc" id="aclass_input_manager_html_ab04bec8af26fb4714c83d1d78ab22791"><div class="ttname"><a href="class_input_manager.html#ab04bec8af26fb4714c83d1d78ab22791">InputManager.MouseAction</a></div><div class="ttdeci">Action&lt; Define.MouseEvent &gt; MouseAction</div><div class="ttdef"><b>Definition:</b> <a href="_input_manager_8cs_source.html#l00013">InputManager.cs:13</a></div></div>
+<div class="ttc" id="aclass_input_manager_html_ab536f97133ddd5fedcce45348295d8f8"><div class="ttname"><a href="class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8">InputManager.KeyAction</a></div><div class="ttdeci">Action KeyAction</div><div class="ttdef"><b>Definition:</b> <a href="_input_manager_8cs_source.html#l00012">InputManager.cs:12</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -160,7 +187,47 @@ Public 속성</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab04bec8af26fb4714c83d1d78ab22791" name="ab04bec8af26fb4714c83d1d78ab22791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04bec8af26fb4714c83d1d78ab22791">&#9670;&#160;</a></span>MouseAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="class_define.html#a5f278706f235727f39ae168af63b1d99">Define.MouseEvent</a>&gt; MouseAction = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7feeca4455162e90fd6c8a7fb8aaa82b" name="a7feeca4455162e90fd6c8a7fb8aaa82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7feeca4455162e90fd6c8a7fb8aaa82b">&#9670;&#160;</a></span>mPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mPressed = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_input_manager_8cs_source.html">InputManager.cs</a> 파일의 <a class="el" href="_input_manager_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>

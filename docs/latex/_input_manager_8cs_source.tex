@@ -6,34 +6,53 @@
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
 \DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00009}\mbox{\hyperlink{class_input_manager}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_manager}{InputManager}}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00010}00010\ \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00011}\mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ Action\ \mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00012}00012\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00017}\mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{OnUpdate}}()}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00018}00018\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.anyKey\ ==\ \textcolor{keyword}{false})}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}.Invoke();}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00024}00024\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00025}00025\ \}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00027}00027\ \textcolor{comment}{/*\ 사용예제}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00028}00028\ \textcolor{comment}{\ \ \ \ void\ Start()}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00029}00029\ \textcolor{comment}{\ \ \ \ \{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00030}00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager.Input.mKeyAction\ +=\ OnKeyboard;}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00031}00031\ \textcolor{comment}{\ \ \ \ \}}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00032}00032\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00033}00033\ \textcolor{comment}{\ \ \ \ void\ OnKeyboard()}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00034}00034\ \textcolor{comment}{\ \ \ \ \{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00035}00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (Input.GetKey(KeyCode.W))}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00036}00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00037}00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ transform.position\ +=\ Vector3.forward\ *\ Time.deltaTime\ *\ mSpeed;}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00038}00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00039}00039\ \textcolor{comment}{\ \ \ \ \}}}
-\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00040}00040\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00010}\mbox{\hyperlink{class_input_manager}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_manager}{InputManager}}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00012}\mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ Action\ \mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00013}\mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ Action<\mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a5f278706f235727f39ae168af63b1d99}{MouseEvent}}>\ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00015}\mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{00015}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00021}\mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{OnUpdate}}()}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (EventSystem.current.IsPointerOverGameObject())}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}\ !=\ \textcolor{keyword}{null}\ \&\&\ Input.anyKey)}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}.Invoke();}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetMouseButton(0))}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}.Invoke(\mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a5f278706f235727f39ae168af63b1d99}{MouseEvent}}.Press);}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}})}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}.Invoke(\mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a5f278706f235727f39ae168af63b1d99}{MouseEvent}}.Click);}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00046}00046\ \textcolor{comment}{/*\ 사용예제}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00047}00047\ \textcolor{comment}{\ \ \ \ void\ Start()}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00048}00048\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ GameManager.InputMng.KeyAction\ +=\ OnKeyboard;}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00051}00051\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00052}00052\ \textcolor{comment}{\ \ \ \ void\ OnKeyboard()}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ if\ (Input.GetKey(KeyCode.W))}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ transform.position\ +=\ Vector3.forward\ *\ Time.deltaTime\ *\ mSpeed;}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00058}00058\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_input_manager_8cs_source_l00059}00059\ \textcolor{comment}{*/}}
 
 \end{DoxyCode}

@@ -1,12 +1,17 @@
 var searchData=
 [
-  ['images_0',['Images',['../class_test___popup.html#a1ec2c691c74c34f0a87c8f3e1db6e501',1,'Test_Popup']]],
-  ['init_1',['Init',['../class_game_manager.html#a1716946dffd7f7f6a9c8f46406ab0732',1,'GameManager.Init()'],['../class_pool_manager.html#a1e3b6d38df0786ccf7f938d60e386aae',1,'PoolManager.Init()'],['../class_pool.html#a945f4268e790751ad785ea409f148e6b',1,'Pool.Init()'],['../class_test___popup.html#a8045e088b31fe0754fb20cb0a5ff0dc9',1,'Test_Popup.Init()'],['../class_u_i___popup.html#a8045e088b31fe0754fb20cb0a5ff0dc9',1,'UI_Popup.Init()'],['../class_u_i___scene.html#a8045e088b31fe0754fb20cb0a5ff0dc9',1,'UI_Scene.Init()'],['../class_u_i___base.html#a0866ba0f224544c505bb9576cb98243b',1,'UI_Base.Init()']]],
-  ['inputmanager_2',['InputManager',['../class_input_manager.html',1,'']]],
-  ['inputmanager_2ecs_3',['InputManager.cs',['../_input_manager_8cs.html',1,'']]],
-  ['inputmng_4',['InputMng',['../class_game_manager.html#a9823969455de682aa277aaecebd0b4be',1,'GameManager']]],
-  ['instance_5',['Instance',['../class_game_manager.html#a6276f9bdbe9295f7060832971cc39f18',1,'GameManager']]],
-  ['instantiate_6',['Instantiate',['../class_resource_manager.html#a04b388e19bffc92646a7c885976a9bbd',1,'ResourceManager']]],
-  ['isusing_7',['IsUsing',['../class_pool_able.html#a729881ca52569af899bb551405133da5',1,'PoolAble']]],
-  ['itemicon_8',['ItemIcon',['../class_test___popup.html#a1ec2c691c74c34f0a87c8f3e1db6e501a753a0fab47004d115a96793a15890876',1,'Test_Popup']]]
+  ['gamemanager_0',['GameManager',['../class_game_manager.html',1,'']]],
+  ['gamemanager_2ecs_1',['GameManager.cs',['../_game_manager_8cs.html',1,'']]],
+  ['gameobjects_2',['GameObjects',['../class_u_i___test_popup.html#a11b4fe9f4efc221e06a058a1b6650e3d',1,'UI_TestPopup.GameObjects()'],['../class_u_i___inven.html#a11b4fe9f4efc221e06a058a1b6650e3d',1,'UI_Inven.GameObjects()'],['../class_u_i___inven___item.html#a11b4fe9f4efc221e06a058a1b6650e3d',1,'UI_Inven_Item.GameObjects()']]],
+  ['gamescene_3',['GameScene',['../class_game_scene.html',1,'GameScene'],['../class_define.html#acf721625ddb3197a5be044f6d5600600a9fdac9746243f059f98c2fc9eb61ab0d',1,'Define.GameScene()']]],
+  ['gamescene_2ecs_4',['GameScene.cs',['../_game_scene_8cs.html',1,'']]],
+  ['get_3c_20t_20_3e_5',['Get&lt; T &gt;',['../class_u_i___base.html#a293b3cca54ae15b7488909f8ba1b5fee',1,'UI_Base']]],
+  ['getbutton_6',['GetButton',['../class_u_i___base.html#a020946bab466c5c0ead9a2dab5a42b7b',1,'UI_Base']]],
+  ['getgameobject_7',['GetGameObject',['../class_u_i___base.html#a12c79fe91c36738677d41b16feebd2f3',1,'UI_Base']]],
+  ['getimage_8',['GetImage',['../class_u_i___base.html#a4503b80a59127313ba02caeed6fe7d3d',1,'UI_Base']]],
+  ['getoraddcomponent_3c_20t_20_3e_9',['GetOrAddComponent&lt; T &gt;',['../class_extension.html#a7916e76f507c718266c2e8e75ba428f6',1,'Extension.GetOrAddComponent&lt; T &gt;()'],['../class_util.html#a663efa76c682bb744f5b764194c142d4',1,'Util.GetOrAddComponent&lt; T &gt;()']]],
+  ['getoriginal_10',['GetOriginal',['../class_pool_manager.html#aa603d4785d1a6926ef2c033599b0ee76',1,'PoolManager']]],
+  ['getscenename_11',['GetSceneName',['../class_scene_manager_ex.html#a7c16375c6c2d509958fe26925edf9186',1,'SceneManagerEx']]],
+  ['gettextmeshprougui_12',['GetTextMeshProUGUI',['../class_u_i___base.html#a355079952b0fa734f33838f3fcc4c865',1,'UI_Base']]],
+  ['gridpanel_13',['GridPanel',['../class_u_i___inven.html#a11b4fe9f4efc221e06a058a1b6650e3da246ad5c127b0d92e6714412f452409c2',1,'UI_Inven']]]
 ];

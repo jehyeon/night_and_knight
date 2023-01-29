@@ -1,0 +1,47 @@
+\hypertarget{_u_i___inven___item_8cs_source}{}\doxysection{UI\+\_\+\+Inven\+\_\+\+Item.\+cs}
+\label{_u_i___inven___item_8cs_source}\index{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/SubItemUI/UI\_Inven\_Item.cs@{C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-\/project/night\_and\_knight/Assets/C\#/UI/SubItemUI/UI\_Inven\_Item.cs}}
+\mbox{\hyperlink{_u_i___inven___item_8cs}{이 파일의 문서화 페이지로 가기}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.EventSystems;}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }Unity.UI;}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00008}\mbox{\hyperlink{class_u_i___inven___item}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_i___inven___item}{UI\_Inven\_Item}}\ :\ \mbox{\hyperlink{class_u_i___base}{UI\_Base}}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00010}00010\ \ \ \ \ \textcolor{comment}{//\ 종류가\ 적을땐\ GameObjects로\ 통일}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00011}\mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{00011}}\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da753a0fab47004d115a96793a15890876}{ItemIcon}},}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3da75b3442ca70da742d338c1c91e216317}{ItemNameText}}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00017}\mbox{\hyperlink{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}{00017}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}{mItemName}};}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00018}00018\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00019}\mbox{\hyperlink{class_u_i___inven___item_a07aaf1227e4d645f15e0a964f54ef291}{00019}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___inven___item_a07aaf1227e4d645f15e0a964f54ef291}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a8045e088b31fe0754fb20cb0a5ff0dc9}{Init}}();}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00024}\mbox{\hyperlink{class_u_i___inven___item_a8045e088b31fe0754fb20cb0a5ff0dc9}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___inven___item_a8045e088b31fe0754fb20cb0a5ff0dc9}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ Bind<GameObject>(typeof(\mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}));}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}{GetGameObject}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}.ItemNameText).GetComponent<TextMeshProUGUI>().text\ =\ \mbox{\hyperlink{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}{mItemName}};}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___base_a12c79fe91c36738677d41b16feebd2f3}{GetGameObject}}((\textcolor{keywordtype}{int})\mbox{\hyperlink{class_u_i___inven___item_a11b4fe9f4efc221e06a058a1b6650e3d}{GameObjects}}.ItemIcon).gameObject.BindEvent(\mbox{\hyperlink{class_u_i___inven___item_a85049360b699f9def5ae06e08bede360}{OnButtonClicked}},\ \mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a42845c46592624ff0de829dd2ee92ee6}{UIEvent}}.Click);}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00032}\mbox{\hyperlink{class_u_i___inven___item_a198d3d75626bae89a926e01722a75f53}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___inven___item_a198d3d75626bae89a926e01722a75f53}{SetInfo}}(\textcolor{keywordtype}{string}\ itemName)}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i___inven___item_a2fe42c781fd97560110b839e012952e7}{mItemName}}\ =\ itemName;}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00037}\mbox{\hyperlink{class_u_i___inven___item_a85049360b699f9def5ae06e08bede360}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i___inven___item_a85049360b699f9def5ae06e08bede360}{OnButtonClicked}}(PointerEventData\ data)}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}\{mItemName\}\ Click!"{}});}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_u_i___inven___item_8cs_source_l00041}00041\ \}}
+
+\end{DoxyCode}

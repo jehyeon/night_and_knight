@@ -231,31 +231,32 @@ Private 속성</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">할일:</a></b></dt><dd>DontDestroyOnLoad 해제용 코드 구현 </dd></dl>
 
-<p class="definition"><a class="el" href="_pool_8cs_source.html">Pool.cs</a> 파일의 <a class="el" href="_pool_8cs_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>        <a class="code hl_class" href="class_pool_able.html">PoolAble</a> poolAble;</div>
-<div class="line"><span class="lineno">   57</span>        </div>
-<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Count &gt; 0)</div>
-<div class="line"><span class="lineno">   59</span>            poolAble = <a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Pop();</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            poolAble = <a class="code hl_function" href="class_pool.html#ab27bd35e14dcc2bb8a668d7675d00978">Create</a>();</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-<div class="line"><span class="lineno">   64</span>        </div>
-<div class="line"><span class="lineno">   65</span>        poolAble.gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   66</span>        </div>
-<div class="line"><span class="lineno">   67</span>        </div>
-<div class="line"><span class="lineno">   68</span>         <span class="comment">// if (parent == null) </span></div>
-<div class="line"><span class="lineno">   69</span>         <span class="comment">//     poolAble.transform.parent = GameManager.SceneMng.CurrentScene.transform;*/</span></div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>        poolAble.transform.parent = parent;</div>
-<div class="line"><span class="lineno">   72</span>        poolAble.IsUsing = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> poolAble;</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
+<p class="definition"><a class="el" href="_pool_8cs_source.html">Pool.cs</a> 파일의 <a class="el" href="_pool_8cs_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>    {</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_class" href="class_pool_able.html">PoolAble</a> poolAble;</div>
+<div class="line"><span class="lineno">   56</span>        </div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Count &gt; 0)</div>
+<div class="line"><span class="lineno">   58</span>            poolAble = <a class="code hl_variable" href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">mPoolStack</a>.Pop();</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   60</span>        {</div>
+<div class="line"><span class="lineno">   61</span>            poolAble = <a class="code hl_function" href="class_pool.html#ab27bd35e14dcc2bb8a668d7675d00978">Create</a>();</div>
+<div class="line"><span class="lineno">   62</span>        }</div>
+<div class="line"><span class="lineno">   63</span>        </div>
+<div class="line"><span class="lineno">   64</span>        poolAble.gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   65</span>        </div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (parent == <span class="keyword">null</span>) </div>
+<div class="line"><span class="lineno">   67</span>            poolAble.transform.parent = <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#a77885fb8371a21ac5e9022a297058f29">SceneMng</a>.<a class="code hl_property" href="class_scene_manager_ex.html#af7617a6051386311326b132cb4e16bc8">CurrentScene</a>.transform;</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>        poolAble.transform.parent = parent;</div>
+<div class="line"><span class="lineno">   70</span>        poolAble.IsUsing = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> poolAble;</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">전역으로 게임 전체와 다른 Manager를 관리하는 Manager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00009">GameManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_a77885fb8371a21ac5e9022a297058f29"><div class="ttname"><a href="class_game_manager.html#a77885fb8371a21ac5e9022a297058f29">GameManager.SceneMng</a></div><div class="ttdeci">static SceneManagerEx SceneMng</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00024">GameManager.cs:24</a></div></div>
 <div class="ttc" id="aclass_pool_html_a86a494509dc100f7324bf877de0fb4cc"><div class="ttname"><a href="class_pool.html#a86a494509dc100f7324bf877de0fb4cc">Pool.mPoolStack</a></div><div class="ttdeci">Stack&lt; PoolAble &gt; mPoolStack</div><div class="ttdef"><b>Definition:</b> <a href="_pool_8cs_source.html#l00011">Pool.cs:11</a></div></div>
+<div class="ttc" id="aclass_scene_manager_ex_html_af7617a6051386311326b132cb4e16bc8"><div class="ttname"><a href="class_scene_manager_ex.html#af7617a6051386311326b132cb4e16bc8">SceneManagerEx.CurrentScene</a></div><div class="ttdeci">BaseScene CurrentScene</div><div class="ttdef"><b>Definition:</b> <a href="_scene_manager_ex_8cs_source.html#l00011">SceneManagerEx.cs:11</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
