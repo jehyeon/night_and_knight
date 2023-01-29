@@ -49,7 +49,6 @@ public class Pool
     
     /**
      * @param mPoolStack로부터 꺼내와서 parent를 부모 오브젝트로 설정 (오브젝트 활성화)
-     * @todo DontDestroyOnLoad 해제용 코드 구현
      */
     public PoolAble Pop(Transform parent)
     {
@@ -64,9 +63,8 @@ public class Pool
         
         poolAble.gameObject.SetActive(true);
         
-        
-         // if (parent == null) 
-         //     poolAble.transform.parent = GameManager.SceneMng.CurrentScene.transform;*/
+        if (parent == null) 
+            poolAble.transform.parent = GameManager.SceneMng.CurrentScene.transform;
 
         poolAble.transform.parent = parent;
         poolAble.IsUsing = true;
