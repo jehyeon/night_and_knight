@@ -10,18 +10,25 @@ public class Test : MonoBehaviour
 {
     private void Start()
     {
-        TestButtonUI();
+        //TestCube();
+        //TestPopupUI();
+        TestSceneUI();
     }
 
     public void TestCube()
     {
         List<GameObject> go = new List<GameObject>();
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 4; i++)
             go.Add(GameManager.ResourceMng.Instantiate("Cube"));
     }
 
-    public void TestButtonUI()
+    public void TestPopupUI()
     {
-        Test_Popup button = GameManager.UIMng.ShowPopupUI<Test_Popup>("Test_Popup");
+        GameManager.UIMng.ShowPopupUI<UI_TestPopup>();
+    }
+
+    public void TestSceneUI()
+    {
+        GameManager.UIMng.ShowSceneUI<UI_Inven>();
     }
 }

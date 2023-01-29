@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,7 +8,7 @@ using UnityEngine.UI;
 /*
  * @brief TEST CODE
  */
-public class Test_Popup : UI_Popup
+public class UI_TestPopup : UI_Popup
 {
     enum Buttons
     {
@@ -33,6 +31,8 @@ public class Test_Popup : UI_Popup
         ItemIcon
     }
 
+    private int mMoney = 0;
+    
     private void Start()
     {
         Init();
@@ -50,17 +50,15 @@ public class Test_Popup : UI_Popup
         GetButton((int)Buttons.MoneyButton).gameObject.BindEvent(OnButtonClicked, Define.UIEvent.Click);
         GetImage((int)Images.ItemIcon).gameObject.BindEvent(OnDrag, Define.UIEvent.Drag);
     }
-
-    private int mMoney = 0;
+    
     public void OnButtonClicked(PointerEventData data)
     {
         mMoney++;
-        GetText((int)Texts.MoneyText).text = $"Money: {mMoney}";
+        GetTextMeshProUGUI((int)Texts.MoneyText).text = $"Money: {mMoney}!";
     }
 
     public void OnDrag(PointerEventData data)
     {
-        print("drag");
         GetImage((int)Images.ItemIcon).transform.position = data.position;
     }
 }

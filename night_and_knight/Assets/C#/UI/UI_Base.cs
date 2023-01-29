@@ -49,25 +49,13 @@ public abstract class UI_Base : MonoBehaviour
         return objects[idx] as T;
     }
 
-    protected GameObject GetObject(int idx)
-    {
-        return Get<GameObject>(idx);
-    }
+    protected GameObject GetGameObject(int idx) { return Get<GameObject>(idx); }
 
-    protected TextMeshProUGUI GetText(int idx)
-    {
-        return Get<TextMeshProUGUI>(idx);
-    }
+    protected TextMeshProUGUI GetTextMeshProUGUI(int idx) { return Get<TextMeshProUGUI>(idx); }
 
-    protected Button GetButton(int idx)
-    {
-        return Get<Button>(idx);
-    }
+    protected Button GetButton(int idx) { return Get<Button>(idx); }
 
-    protected Image GetImage(int idx)
-    {
-        return Get<Image>(idx);
-    }
+    protected Image GetImage(int idx) { return Get<Image>(idx); }
 
     /*
      * @details 액션에 액션을 더하는 것도 가능
