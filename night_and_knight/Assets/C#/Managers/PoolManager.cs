@@ -71,9 +71,6 @@ public class PoolManager
         return mPoolDic[name].Original;
     }
     
-    /**
-     * @brief 모든 Pool Clear
-     */
     public void Clear()
     {
         foreach (Transform child in mRoot)
