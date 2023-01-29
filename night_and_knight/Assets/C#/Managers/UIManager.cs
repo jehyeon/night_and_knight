@@ -19,7 +19,7 @@ public class UIManager
             GameObject root = GameObject.Find("@UI_Root");
             if (root == null)
                 root = new GameObject { name = "@UI_Root" };
-            Object.DontDestroyOnLoad(root);
+            //Object.DontDestroyOnLoad(root);
             
             return root;
         }
@@ -80,6 +80,19 @@ public class UIManager
         return popupUI;
     }
 
+    public T MakeSubItem<T>(Transform parent = null, string name = null) where T : UI_Base
+    {
+        if (string.IsNullOrEmpty(name))
+            name = typeof(T).Name;
+
+        GameObject go = GameManager.ResourceMng.Instantiate($"UI/SubItemUI/{name}");
+        
+        if (parent != null)
+            go.transform.SetParent(parent);
+        
+        return go.GetOrAddComponent<T>();
+    }
+    
     /**
      * @brief 가장 Order가 높은 PopupUI 제거
      */

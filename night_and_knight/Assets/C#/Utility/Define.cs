@@ -3,6 +3,7 @@
  */
 public class Define
 {
+    
     public enum UIEvent
     {
         Click,
@@ -18,5 +19,12 @@ public class Define
     public enum CameraMode
     {
         QuarterView
+    }
+    
+    public enum Scene
+    {
+        UnknownScene,
+        TitleScene,
+        GameScene
     }
 }

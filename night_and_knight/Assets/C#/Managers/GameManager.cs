@@ -5,7 +5,6 @@ using UnityEngine;
 /**
  * @brief 전역으로 게임 전체와 다른 Manager를 관리하는 Manager
  * @details 싱글톤 패턴 적용
- * @see asdf
  */
 public class GameManager : MonoBehaviour
 {
@@ -16,19 +15,21 @@ public class GameManager : MonoBehaviour
     private ResourceManager mResourceMng = new ResourceManager();
     private PoolManager mPoolMng = new PoolManager();
     private UIManager mUIMng = new UIManager();
+    private SceneManagerEx sceneMng = new SceneManagerEx();
     
     public static InputManager InputMng => Instance.mInputMng;
     public static ResourceManager ResourceMng => Instance.mResourceMng;
     public static PoolManager PoolMng => Instance.mPoolMng;
     public static UIManager UIMng => Instance.mUIMng;
+    public static SceneManagerEx SceneMng => Instance.sceneMng;
 
 
-    void Start()
+    private void Start()
     {
         Init();
     }
     
-    void Update()
+    private void Update()
     {
         mInputMng.OnUpdate();
     }
@@ -51,20 +52,8 @@ public class GameManager : MonoBehaviour
         sInstance.mPoolMng.Init();
     }
     
-    /**
-     * @brief GameManager Clear
-     */
     public static void Clear()
     {
         PoolMng.Clear();
     }
-
-    
 }
-
-/* 사용예제
-    void Start()
-    {
-        GameManager gm = GameManager.Instance;
-    }
-*/
