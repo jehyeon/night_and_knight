@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/**
- * @brief Scene을 로드하는 Manager
- */
 public class SceneManagerEx
 {
     public BaseScene CurrentScene => GameObject.FindObjectOfType<BaseScene>();
@@ -23,7 +20,8 @@ public class SceneManagerEx
      */
     public void LoadScene(Define.Scene type)
     {
-        CurrentScene.Clear();
+        GameManager.Clear();
+        
         SceneManager.LoadScene(GetSceneName(type));
     }
 

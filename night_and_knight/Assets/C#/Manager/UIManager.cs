@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * @brief UI 캔버스 프리팹들의 생성과 삭제를 관리
- */
 public class UIManager
 {
     private int mOrder = 10; // 현재까지 최근에 사용한 오더
     
-    private UI_Scene mSceneUI = null; // 현재의 고정 캔버스 UI
+    private UI_Scene mSceneUI; // 현재의 고정 캔버스 UI
     private Stack<UI_Popup> mPopupStack = new Stack<UI_Popup>(); // 팝업 캔버스 UI Stack
 
     public GameObject Root
@@ -19,8 +16,7 @@ public class UIManager
             GameObject root = GameObject.Find("@UI_Root");
             if (root == null)
                 root = new GameObject { name = "@UI_Root" };
-            //Object.DontDestroyOnLoad(root);
-            
+
             return root;
         }
     }
@@ -56,6 +52,7 @@ public class UIManager
 
         GameObject go = GameManager.ResourceMng.Instantiate($"UI/SceneUI/{name}");
         T sceneUI = Util.GetOrAddComponent<T>(go);
+        mSceneUI = sceneUI;
 
         go.transform.SetParent(Root.transform);
         
@@ -133,5 +130,11 @@ public class UIManager
         {
             ClosePopupUI();
         }
+    }
+    
+    public void Clear()
+    {
+        CloseAllPopupUI();
+        mSceneUI = null;
     }
 }

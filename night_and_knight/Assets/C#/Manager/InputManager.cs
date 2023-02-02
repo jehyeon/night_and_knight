@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-/**
- * @brief 사용자의 키보드, 마우스 입력을 받는 Manager
- */
 public class InputManager
 {
     public Action KeyAction = null;
@@ -40,6 +37,12 @@ public class InputManager
                 mPressed = false;
             }
         }
+    }
+    
+    public void Clear()
+    {
+        KeyAction = null;
+        MouseAction = null;
     }
 }
 

@@ -3,7 +3,6 @@
  */
 public class Define
 {
-    
     public enum UIEvent
     {
         Click,
@@ -26,5 +25,12 @@ public class Define
         UnknownScene,
         TitleScene,
         GameScene
+    }
+    
+    public enum Sound
+    {
+        Bgm,
+        Effect,
+        MaxCount
     }
 }
