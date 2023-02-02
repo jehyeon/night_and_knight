@@ -1,5 +1,6 @@
 var class_data_manager =
 [
-    [ "Start", "class_data_manager.html#a07aaf1227e4d645f15e0a964f54ef291", null ],
-    [ "Update", "class_data_manager.html#aec0783b5a136e042adcc47bae4fe5291", null ]
+    [ "Init", "class_data_manager.html#a1e3b6d38df0786ccf7f938d60e386aae", null ],
+    [ "LoadJson< Data, Key, Value >", "class_data_manager.html#a98b2ed51f9ab111ae7000bd426996ff5", null ],
+    [ "StatDic", "class_data_manager.html#afa36e930b484bad84ae65a75489246f3", null ]
 ];

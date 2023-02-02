@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>night_and_knight: C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-project/night_and_knight/Assets/C#/Managers/SoundManager.cs 소스 파일</title>
+<title>night_and_knight: C:/Users/ddino/Documents/WorkSpace/UnityProjects/alpha-project/night_and_knight/Assets/C#/Manager/SoundManager.cs 소스 파일</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,29 +97,115 @@ $(document).ready(function(){initNavTree('_sound_manager_8cs_source.html',''); i
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_sound_manager.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_sound_manager.html">SoundManager</a> : MonoBehaviour</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_sound_manager.html">    5</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_sound_manager.html">SoundManager</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_sound_manager.html#a07aaf1227e4d645f15e0a964f54ef291">    8</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_manager.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a>()</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_sound_manager.html#aec0783b5a136e042adcc47bae4fe5291">   14</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_manager.html#aec0783b5a136e042adcc47bae4fe5291">Update</a>()</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">    7</a></span>    <span class="keyword">private</span> AudioSource[] <a class="code hl_variable" href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">mAudioSources</a> = <span class="keyword">new</span> AudioSource[(int)<a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.MaxCount];</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_sound_manager.html#af62321d93e1d6e80043f1a1f83be12f2">    8</a></span>    <span class="keyword">private</span> Dictionary&lt;string, AudioClip&gt; <a class="code hl_variable" href="class_sound_manager.html#af62321d93e1d6e80043f1a1f83be12f2">mAudioClipDic</a> = <span class="keyword">new</span> Dictionary&lt;string, AudioClip&gt;();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_sound_manager.html#a1e3b6d38df0786ccf7f938d60e386aae">   10</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_manager.html#a1e3b6d38df0786ccf7f938d60e386aae">Init</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        GameObject root = GameObject.Find(<span class="stringliteral">&quot;@Sound&quot;</span>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">if</span> (root == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            root = <span class="keyword">new</span> GameObject { name = <span class="stringliteral">&quot;@Sound&quot;</span> };</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            Object.DontDestroyOnLoad(root);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <span class="keywordtype">string</span>[] soundNames = System.Enum.GetNames(typeof(<a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; soundNames.Length - 1; i++)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                GameObject go = <span class="keyword">new</span> GameObject { name = soundNames[i] };</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <a class="code hl_variable" href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">mAudioSources</a>[i] = go.AddComponent&lt;AudioSource&gt;();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                go.transform.parent = root.transform;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_variable" href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">mAudioSources</a>[(int)<a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.Bgm].loop = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_sound_manager.html#a8b20e858436d8a2cf438cb0016ab58dd">   33</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_manager.html#a8b20e858436d8a2cf438cb0016ab58dd">Play</a>(<span class="keywordtype">string</span> path, <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a> type = <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.Effect, <span class="keywordtype">float</span> pitch = 1.0f)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        AudioClip audioClip = <a class="code hl_function" href="class_sound_manager.html#a99f1e79abebb024e89cc7fcdb33fb3a5">GetOrAddAudioClip</a>(path, type);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_function" href="class_sound_manager.html#a8b20e858436d8a2cf438cb0016ab58dd">Play</a>(audioClip, type, pitch);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_sound_manager.html#a626d804ae44a1df0294272b219c75b48">   43</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_manager.html#a626d804ae44a1df0294272b219c75b48">Play</a>(AudioClip audioClip, <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a> type = <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.Effect, <span class="keywordtype">float</span> pitch = 1.0f)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (audioClip == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (type == <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.Bgm)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            AudioSource audioSource = <a class="code hl_variable" href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">mAudioSources</a>[(int)type];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (audioSource.isPlaying)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                audioSource.Stop();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            audioSource.pitch = pitch;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            audioSource.clip = audioClip;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            audioSource.Play();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            AudioSource audioSource = <a class="code hl_variable" href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">mAudioSources</a>[(int)<a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.Effect];</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            audioSource.pitch = pitch;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            audioSource.PlayOneShot(audioClip);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_sound_manager.html#a99f1e79abebb024e89cc7fcdb33fb3a5">   69</a></span>    <span class="keyword">private</span> AudioClip <a class="code hl_function" href="class_sound_manager.html#a99f1e79abebb024e89cc7fcdb33fb3a5">GetOrAddAudioClip</a>(<span class="keywordtype">string</span> path, <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a> type = <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.Effect)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (path.Contains(<span class="stringliteral">&quot;Sound/&quot;</span>) == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            path = $<span class="stringliteral">&quot;Sound/{path}&quot;</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        AudioClip audioClip;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span> (type == <a class="code hl_class" href="class_define.html">Define</a>.<a class="code hl_enumeration" href="class_define.html#a78d488655886fd6a1355b1162fba927f">Sound</a>.Bgm)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            audioClip = <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#a496f52583a8ea4b899679fe3254546ed">ResourceMng</a>.Load&lt;AudioClip&gt;(path);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_sound_manager.html#af62321d93e1d6e80043f1a1f83be12f2">mAudioClipDic</a>.TryGetValue(path, out audioClip) == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                audioClip = <a class="code hl_class" href="class_game_manager.html">GameManager</a>.<a class="code hl_property" href="class_game_manager.html#a496f52583a8ea4b899679fe3254546ed">ResourceMng</a>.Load&lt;AudioClip&gt;(path);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <a class="code hl_variable" href="class_sound_manager.html#af62321d93e1d6e80043f1a1f83be12f2">mAudioClipDic</a>.Add(path, audioClip);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">if</span> (audioClip == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            Debug.Log($<span class="stringliteral">&quot;Failed to load AudioClip : {path}&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> audioClip;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_sound_manager.html#aa71d36872f416feaa853788a7a7a7ef8">   95</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_manager.html#aa71d36872f416feaa853788a7a7a7ef8">Clear</a>()</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">foreach</span> (AudioSource audioSource <span class="keywordflow">in</span> <a class="code hl_variable" href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">mAudioSources</a>)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            audioSource.clip = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            audioSource.Stop();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_variable" href="class_sound_manager.html#af62321d93e1d6e80043f1a1f83be12f2">mAudioClipDic</a>.Clear();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="ttc" id="aclass_define_html"><div class="ttname"><a href="class_define.html">Define</a></div><div class="ttdoc">enum 정의</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00004">Define.cs:5</a></div></div>
+<div class="ttc" id="aclass_define_html_a78d488655886fd6a1355b1162fba927f"><div class="ttname"><a href="class_define.html#a78d488655886fd6a1355b1162fba927f">Define.Sound</a></div><div class="ttdeci">Sound</div><div class="ttdef"><b>Definition:</b> <a href="_define_8cs_source.html#l00030">Define.cs:31</a></div></div>
+<div class="ttc" id="aclass_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdoc">전역으로 게임 전체와 다른 Manager를 관리하는 Manager</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00010">GameManager.cs:11</a></div></div>
+<div class="ttc" id="aclass_game_manager_html_a496f52583a8ea4b899679fe3254546ed"><div class="ttname"><a href="class_game_manager.html#a496f52583a8ea4b899679fe3254546ed">GameManager.ResourceMng</a></div><div class="ttdeci">static ResourceManager ResourceMng</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00026">GameManager.cs:26</a></div></div>
 <div class="ttc" id="aclass_sound_manager_html"><div class="ttname"><a href="class_sound_manager.html">SoundManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00005">SoundManager.cs:6</a></div></div>
-<div class="ttc" id="aclass_sound_manager_html_a07aaf1227e4d645f15e0a964f54ef291"><div class="ttname"><a href="class_sound_manager.html#a07aaf1227e4d645f15e0a964f54ef291">SoundManager.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00008">SoundManager.cs:8</a></div></div>
-<div class="ttc" id="aclass_sound_manager_html_aec0783b5a136e042adcc47bae4fe5291"><div class="ttname"><a href="class_sound_manager.html#aec0783b5a136e042adcc47bae4fe5291">SoundManager.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00014">SoundManager.cs:14</a></div></div>
+<div class="ttc" id="aclass_sound_manager_html_a1e3b6d38df0786ccf7f938d60e386aae"><div class="ttname"><a href="class_sound_manager.html#a1e3b6d38df0786ccf7f938d60e386aae">SoundManager.Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00010">SoundManager.cs:10</a></div></div>
+<div class="ttc" id="aclass_sound_manager_html_a626d804ae44a1df0294272b219c75b48"><div class="ttname"><a href="class_sound_manager.html#a626d804ae44a1df0294272b219c75b48">SoundManager.Play</a></div><div class="ttdeci">void Play(AudioClip audioClip, Define.Sound type=Define.Sound.Effect, float pitch=1.0f)</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00043">SoundManager.cs:43</a></div></div>
+<div class="ttc" id="aclass_sound_manager_html_a790590c5c29c56716c3cbb8b42ff01cf"><div class="ttname"><a href="class_sound_manager.html#a790590c5c29c56716c3cbb8b42ff01cf">SoundManager.mAudioSources</a></div><div class="ttdeci">AudioSource[] mAudioSources</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00007">SoundManager.cs:7</a></div></div>
+<div class="ttc" id="aclass_sound_manager_html_a8b20e858436d8a2cf438cb0016ab58dd"><div class="ttname"><a href="class_sound_manager.html#a8b20e858436d8a2cf438cb0016ab58dd">SoundManager.Play</a></div><div class="ttdeci">void Play(string path, Define.Sound type=Define.Sound.Effect, float pitch=1.0f)</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00033">SoundManager.cs:33</a></div></div>
+<div class="ttc" id="aclass_sound_manager_html_a99f1e79abebb024e89cc7fcdb33fb3a5"><div class="ttname"><a href="class_sound_manager.html#a99f1e79abebb024e89cc7fcdb33fb3a5">SoundManager.GetOrAddAudioClip</a></div><div class="ttdeci">AudioClip GetOrAddAudioClip(string path, Define.Sound type=Define.Sound.Effect)</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00069">SoundManager.cs:69</a></div></div>
+<div class="ttc" id="aclass_sound_manager_html_aa71d36872f416feaa853788a7a7a7ef8"><div class="ttname"><a href="class_sound_manager.html#aa71d36872f416feaa853788a7a7a7ef8">SoundManager.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00095">SoundManager.cs:95</a></div></div>
+<div class="ttc" id="aclass_sound_manager_html_af62321d93e1d6e80043f1a1f83be12f2"><div class="ttname"><a href="class_sound_manager.html#af62321d93e1d6e80043f1a1f83be12f2">SoundManager.mAudioClipDic</a></div><div class="ttdeci">Dictionary&lt; string, AudioClip &gt; mAudioClipDic</div><div class="ttdef"><b>Definition:</b> <a href="_sound_manager_8cs_source.html#l00008">SoundManager.cs:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_da53113e0571038a2fd33d034d15d718.html">night_and_knight</a></li><li class="navelem"><a class="el" href="dir_28f09271f3f6ea85745cad1a4a9fcb88.html">Assets</a></li><li class="navelem"><a class="el" href="dir_d287fdd1a051d1a3a10b76e8db777a8d.html">C#</a></li><li class="navelem"><a class="el" href="dir_5cfa20e54623ff3e1171b3f24b950341.html">Managers</a></li><li class="navelem"><a class="el" href="_sound_manager_8cs.html">SoundManager.cs</a></li>
+    <li class="navelem"><a class="el" href="dir_da53113e0571038a2fd33d034d15d718.html">night_and_knight</a></li><li class="navelem"><a class="el" href="dir_28f09271f3f6ea85745cad1a4a9fcb88.html">Assets</a></li><li class="navelem"><a class="el" href="dir_d287fdd1a051d1a3a10b76e8db777a8d.html">C#</a></li><li class="navelem"><a class="el" href="dir_2e02bfa13956d0661b9a64dfd0e83e23.html">Manager</a></li><li class="navelem"><a class="el" href="_sound_manager_8cs.html">SoundManager.cs</a></li>
     <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>

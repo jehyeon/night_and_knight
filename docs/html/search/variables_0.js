@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyaction_0',['KeyAction',['../class_input_manager.html#ab536f97133ddd5fedcce45348295d8f8',1,'InputManager']]]
+  ['damage_0',['damage',['../class_stat.html#a9b39867abc3f09243fcdc739bd9e6c90',1,'Stat']]]
 ];

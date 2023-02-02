@@ -1,15 +1,12 @@
 \hypertarget{class_input_manager}{}\doxysection{Input\+Manager 클래스 참조}
 \label{class_input_manager}\index{InputManager@{InputManager}}
-
-
-사용자의 키보드, 마우스 입력을 받는 Manager  
-
-
 \doxysubsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_input_manager_a77491714662f827ac632c2eee20f8963}{On\+Update}} ()
-\begin{DoxyCompactList}\small\item\em 입력이 없다면 바로 리턴, 입력이 있다면 Key\+Action/\+Mouse\+Action을 Invoke \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 입력이 없다면 바로 리턴, 입력이 있다면 Key\+Action/\+Mouse\+Action을 Invoke \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_input_manager_aa71d36872f416feaa853788a7a7a7ef8}{Clear}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,13 +22,31 @@ bool \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{m\+
 
 
 \doxysubsection{상세한 설명}
-사용자의 키보드, 마우스 입력을 받는 Manager 
 
-\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
+
+\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00007}{7}} 번째 라인에서 정의되었습니다.
 
 
 
 \doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_input_manager_aa71d36872f416feaa853788a7a7a7ef8}\label{class_input_manager_aa71d36872f416feaa853788a7a7a7ef8}} 
+\index{InputManager@{InputManager}!Clear@{Clear}}
+\index{Clear@{Clear}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00042}{42}} 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_input_manager_a77491714662f827ac632c2eee20f8963}\label{class_input_manager_a77491714662f827ac632c2eee20f8963}} 
 \index{InputManager@{InputManager}!OnUpdate@{OnUpdate}}
 \index{OnUpdate@{OnUpdate}!InputManager@{InputManager}}
@@ -44,32 +59,32 @@ bool \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{m\+
 
 매 프레임마다 실행 
 
-\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00021}{21}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00018}{18}} 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00022\ \ \ \ \ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (EventSystem.current.IsPointerOverGameObject())}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}\ !=\ \textcolor{keyword}{null}\ \&\&\ Input.anyKey)}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}.Invoke();}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetMouseButton(0))}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}.Invoke(\mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a5f278706f235727f39ae168af63b1d99}{MouseEvent}}.Press);}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}})}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}.Invoke(\mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a5f278706f235727f39ae168af63b1d99}{MouseEvent}}.Click);}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}}\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (EventSystem.current.IsPointerOverGameObject())}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}\ !=\ \textcolor{keyword}{null}\ \&\&\ Input.anyKey)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab536f97133ddd5fedcce45348295d8f8}{KeyAction}}.Invoke();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.GetMouseButton(0))}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}.Invoke(\mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a5f278706f235727f39ae168af63b1d99}{MouseEvent}}.Press);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}})}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}{MouseAction}}.Invoke(\mbox{\hyperlink{class_define}{Define}}.\mbox{\hyperlink{class_define_a5f278706f235727f39ae168af63b1d99}{MouseEvent}}.Click);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{mPressed}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -83,7 +98,7 @@ bool \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{m\+
 
 
 
-\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00009}{9}} 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}\label{class_input_manager_ab04bec8af26fb4714c83d1d78ab22791}} 
 \index{InputManager@{InputManager}!MouseAction@{MouseAction}}
@@ -93,7 +108,7 @@ bool \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{m\+
 
 
 
-\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00013}{13}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00010}{10}} 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}\label{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}} 
 \index{InputManager@{InputManager}!mPressed@{mPressed}}
@@ -103,10 +118,10 @@ bool \mbox{\hyperlink{class_input_manager_a7feeca4455162e90fd6c8a7fb8aaa82b}{m\+
 
 
 
-\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00015}{15}} 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{_input_manager_8cs_source}{Input\+Manager.\+cs}} 파일의 \mbox{\hyperlink{_input_manager_8cs_source_l00012}{12}} 번째 라인에서 정의되었습니다.
 
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/ddino/\+Documents/\+Work\+Space/\+Unity\+Projects/alpha-\/project/night\+\_\+and\+\_\+knight/\+Assets/\+C\#/\+Managers/\mbox{\hyperlink{_input_manager_8cs}{Input\+Manager.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/ddino/\+Documents/\+Work\+Space/\+Unity\+Projects/alpha-\/project/night\+\_\+and\+\_\+knight/\+Assets/\+C\#/\+Manager/\mbox{\hyperlink{_input_manager_8cs}{Input\+Manager.\+cs}}\end{DoxyCompactItemize}

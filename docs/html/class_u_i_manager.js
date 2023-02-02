@@ -1,5 +1,6 @@
 var class_u_i_manager =
 [
+    [ "Clear", "class_u_i_manager.html#aa71d36872f416feaa853788a7a7a7ef8", null ],
     [ "CloseAllPopupUI", "class_u_i_manager.html#a9c45b1ca55f9749a0875024b8cda2044", null ],
     [ "ClosePopupUI", "class_u_i_manager.html#a4416f9eb9f7d5966110fbef4b5bd5a63", null ],
     [ "ClosePopupUI", "class_u_i_manager.html#a539e380cd5f5c9413a9de08c982ff960", null ],
